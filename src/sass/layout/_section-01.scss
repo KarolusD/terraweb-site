@@ -1,0 +1,27 @@
+.site-section {
+    &__image {
+        width: 100vw;
+        height: 100vh;
+        min-width: 320px;
+        min-height: 640px;
+        background-image: url('../images/earth-image.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            min-width: 320px;
+            min-height: 640px;
+            background: linear-gradient(
+                119.35deg, #13171C 0%,
+                 rgba(19, 23, 28, 0) 100%);
+        }
+    }
+}

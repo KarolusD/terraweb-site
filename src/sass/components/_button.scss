@@ -1,0 +1,24 @@
+.btn {
+font-family: Montserrat, sans-serif;
+font-style: normal;
+font-weight: 600;
+line-height: 2.1rem;
+font-size: 1.4em;
+text-align: center;
+letter-spacing: 0.1rem;
+text-transform: uppercase;
+height: 4.0rem;
+padding-left: 3.2rem;
+padding-right: 3.2rem;
+outline: none;
+border: 2px solid transparent;
+    &--primary {
+        color: $primary-text-color;
+        background-color: $primary-brand-color;  
+        position: absolute;
+        left:300px;
+        top: 200px; 
+        box-shadow: -4px 4px 0px rgba(46, 136, 232, 0.4);
+    }
+
+}
