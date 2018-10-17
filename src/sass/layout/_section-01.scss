@@ -24,4 +24,13 @@
                  rgba(19, 23, 28, 0) 100%);
         }
     }
+
+    &__h1 {
+       position: absolute;
+        width: 420px;
+        height: auto;
+        top: 30rem;
+        left: 10rem;
+        text-align: right;
+    }
 }

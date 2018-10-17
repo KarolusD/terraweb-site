@@ -1,4 +1,4 @@
-*{
+ push*{
     box-sizing: border-box;
 }
 
@@ -27,6 +27,5 @@ section {
     width: 100vw;
     height: 100vh;
     min-height: 640px;
-    background-color: $primary-bg-color;
     overflow: hidden;
 }
