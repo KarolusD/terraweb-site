@@ -66,19 +66,35 @@
             z-index: 99999;
             position: absolute;
             width: 3.4rem;
-            height: auto;
+            height: 2.6rem;
             top: 3.6rem;
             right: 4rem;
             display: none;
 
             &__bar {
+                margin-left: auto; 
+                margin-right: 0;
+                border-bottom-left-radius: 0.3rem;
+                border-top-right-radius: 0.3rem;
+                border-top-left-radius: 0;
+                border-bottom-right-radius: 0;
                 margin-bottom: 0.8rem;
-                width: 3.4rem;
+                width: 3.2rem;
                 height: 0.3rem;
                 background-color: $primary-text-color;
                 &:last-child {
                 margin-bottom: 0;
                 }
+            }
+
+            .bar2 {
+                width: 2rem;
+                height: 0.3rem;
+            }
+
+            .bar3 {
+                width: 2.7rem;
+                height: 0.3rem;
             }
         }
 
