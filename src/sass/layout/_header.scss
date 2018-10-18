@@ -17,6 +17,7 @@
         font-size: 4rem;
         margin-left: 8rem;
         margin-top: 4rem;
+        cursor: pointer;
     }
 
     .site-nav {
@@ -35,6 +36,8 @@
             display: inline-block; 
             margin-right: 4.8rem;
             vertical-align: center;
+            cursor: pointer;
+
             &:last-child {
                 margin-right: 0;
             }

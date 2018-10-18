@@ -1,14 +1,15 @@
 .site-section {
+    position: relative;
     &__image {
+        position: absolute;
         width: 100vw;
         height: 100vh;
-        min-width: 320px;
-        min-height: 640px;
         background-image: url('../images/earth-image.png');
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
+        
 
         &:after {
             content: '';
@@ -19,18 +20,125 @@
             height: 100vh;
             min-width: 320px;
             min-height: 640px;
+            opacity: .8;
             background: linear-gradient(
                 119.35deg, #13171C 0%,
                  rgba(19, 23, 28, 0) 100%);
+
         }
     }
 
-    &__h1 {
-       position: absolute;
-        width: 440px;
+    &__info-wrapper {
+        position: absolute;
         height: auto;
-        top: 30rem;
-        left: 10rem;
-        text-align: right;
+        width: auto;
+        top: 34%;
+        right: 50%;
+       
+        &__h1 {
+            position: relative;
+            width: 44rem;
+            height: auto;
+            text-align: right;
+            margin-right: 0;
+            margin-left: auto;
+    
+            .distinction-color {
+                color: $primary-brand-color;
+            }
+        }
+    
+        &__paragraph {
+            position: relative;
+            display: inline-block;
+            margin-top: 5rem;
+            text-align: right;
+            white-space: nowrap; 
+            margin-right: 3.2rem;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 12.8rem;
+                height: .3rem;
+                background-color: $primary-text-color;
+                top: -1.6rem;
+                right: 0;
+            }
+        }
+
+        &__btn {
+            position: relative;
+            display: inline-block;
+            top: -0.8rem;
+            margin-right: 0;
+            margin-left: auto;
+        }
+
+        &__number {
+            position: absolute;
+            left:0;
+            top: -3.3rem;
+            font-family: Montserrat, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 10.9rem;
+            font-size: 8.1rem;
+            text-align: right;
+            color: $primary-text-color;
+            opacity: 0.05;
+        }
     }
+
+    @media (max-width: 1199px) {
+        &__info-wrapper {
+            right: 40%;
+        }
+    }
+    
+    @media (max-width: 1024px) {
+        &__info-wrapper {
+            right: 30%;
+            
+            &__paragraph {
+                display: block;
+                margin-right: 0;
+            }
+
+            &__btn {
+                top: 0;
+                display: block;
+                margin-top: 3.2rem;
+            }
+        }
+    }
+    
+    @media (max-width: 765px) {
+        &__info-wrapper {
+            right: 50%;
+            transform: translateX(50%);
+
+            &__h1 {
+                font-size: 3.2rem;
+                line-height: normal;
+                width: 32rem;
+
+            }
+
+            &__number {
+                font-size: 6.8rem;
+                line-height: normal;
+            }
+        }
+    }
+    
+    @media (max-width: 419px) {
+
+    }
+    
+    @media (max-width: 319px) {
+
+    }
+    
 }
+
