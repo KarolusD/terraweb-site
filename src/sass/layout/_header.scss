@@ -71,7 +71,7 @@
             width: 3.4rem;
             height: 2.6rem;
             top: 3.6rem;
-            right: 4rem;
+            right: 3.8rem;
             display: none;
 
             &__bar {
@@ -172,6 +172,7 @@
     @media (max-width: 319px) {
         .icon-terraweb {
             width: 150px !important;
+            width: 50vw !important;
         }
         
     }
