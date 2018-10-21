@@ -1,4 +1,5 @@
 .site-section {
+    background-color: $primary-bg-color;
     position: relative;
     max-height: 812px;
     &__image {
@@ -21,7 +22,7 @@
             height: 100vh;
             min-width: 320px;
             min-height: 640px;
-            opacity: .5;
+            opacity: .9;
             background: linear-gradient(
                 119.35deg, #13171C 0%,
                  rgba(19, 23, 28, 0) 100%);
@@ -30,19 +31,20 @@
     }
 
     &__info-wrapper {
-        position: absolute;
+        position: relative;
         height: auto;
         width: auto;
         top: 34%;
         right: 50%;
+       ;
        
         &__h1 {
             position: relative;
             width: 44rem;
             height: auto;
-            text-align: right;
             margin-right: 0;
             margin-left: auto;
+            text-align: right;
     
             .distinction-color {
                 color: $primary-brand-color;
@@ -68,6 +70,14 @@
             }
         }
 
+        &__cta {
+            position: relative;
+            display: block;
+            height: auto;
+            width: auto;
+            text-align: right;
+        }
+
         &__btn {
             position: relative;
             display: inline-block;
@@ -83,7 +93,7 @@
             font-family: Montserrat, sans-serif;
             font-style: normal;
             font-weight: 700;
-            line-height: inherit;
+            line-height: 6.4rem;
             font-size: 8.1rem;
             text-align: right;
             color: $primary-text-color;
@@ -116,15 +126,17 @@
     
     @media (max-width: 765px) {
         &__info-wrapper {
-            max-width: 80%;
-            right: 50%;
-            top: 50%;
-            transform: translate(50%, -50%);
+            width: 32rem;
+            right: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            
 
             &__h1 {
-                font-size: 3.6rem;
+                font-size: 3.2rem;
                 line-height: normal;
-                max-width: 100%;
+                width: 100%;
+                max-width: 36rem;
             }
 
             &__number {
@@ -150,6 +162,7 @@
             &__number {
                 font-size: 5rem;
                 font-size: 18vw;
+                line-height: 3.2rem;
             }
 
 
