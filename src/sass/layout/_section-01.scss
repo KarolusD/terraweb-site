@@ -12,7 +12,6 @@
         background-attachment: fixed;
         background-size: cover;
         
-
         &:after {
             content: '';
             position: absolute;
@@ -28,16 +27,26 @@
                  rgba(19, 23, 28, 0) 100%);
 
         }
-    }
+    } 
 
     &__info-wrapper {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+
         position: relative;
         height: auto;
         width: auto;
-        top: 34%;
-        right: 50%;
-       ;
-       
+        top: 32%;
+        left: 16%;
+    }
+
+    &__article {
+        position: relative;
+    
+ 
         &__h1 {
             position: relative;
             width: 44rem;
@@ -53,7 +62,6 @@
     
         &__paragraph {
             position: relative;
-            display: inline-block;
             margin-top: 5rem;
             text-align: right;
             white-space: nowrap; 
@@ -71,8 +79,13 @@
         }
 
         &__cta {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: flex-start;
+
             position: relative;
-            display: block;
             height: auto;
             width: auto;
             text-align: right;
@@ -80,10 +93,10 @@
 
         &__btn {
             position: relative;
-            display: inline-block;
             top: -0.8rem;
             margin-right: 0;
             margin-left: auto;
+            margin-top: 3.6rem;
         }
 
         &__number {
@@ -101,77 +114,75 @@
         }
     }
 
-    @media (max-width: 1199px) {
-        &__info-wrapper {
-            right: 40%;
+        @media (max-width: 1199px) {
+            &__info-wrapper{
+                left: 16%
+            }
         }
-    }
-    
-    @media (max-width: 1024px) {
-        &__info-wrapper {
-            right: 30%;
+        
+        @media (max-width: 1024px) {
+
+            &__info-wrapper {
+                left: 50%;
+                transform: translateX(-50%); 
+            }
+        }
+        
+        
+        @media (max-width: 765px) {
+
+            &__article {
+                width: 32rem; 
+
+                &__h1 {
+                    font-size: 3.2rem;
+                    line-height: normal;
+                    width: 100%;
+                    max-width: 36rem;
+                }
+
+                 &__paragraph {
+                    margin-right: 0;
+                }
+
+                &__number {
+                    font-size: 6.8rem;
+                }
+            }
+        }
+        
+        @media (max-width: 419px) {
+
+            &__info-wrapper {
+                width: 80%;
+            }
+
+            &__article {
+
+                &__h1 {
+                    font-size: 3.2rem;
+                    font-size: 7.5vw;
+                    width: 100%;
+                }
+                
+                &__paragraph {
+                    font-size: 1.2rem;
+                    font-size: 3.4vw;
+                }
+
+                &__number {
+                    font-size: 5rem;
+                    font-size: 18vw;
+                    line-height: 3.2rem;
+                }
+
+
+            }
+        }
+        
+        @media (max-width: 319px) {
+        &__article {
             
-            &__paragraph {
-                display: block;
-                margin-right: 0;
-            }
-
-            &__btn {
-                top: 0;
-                display: block;
-                margin-top: 3.2rem;
-            }
-        }
-    }
-    
-    @media (max-width: 765px) {
-        &__info-wrapper {
-            width: 32rem;
-            right: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            
-
-            &__h1 {
-                font-size: 3.2rem;
-                line-height: normal;
-                width: 100%;
-                max-width: 36rem;
-            }
-
-            &__number {
-                font-size: 6.8rem;
-            }
-        }
-    }
-    
-    @media (max-width: 419px) {
-        &__info-wrapper {
-            width: 80%;
-
-            &__h1 {
-                font-size: 3.2rem;
-                font-size: 7.5vw;
-                width: 100%;
-            }
-            
-            &__paragraph {
-                font-size: 1.2rem;
-            }
-
-            &__number {
-                font-size: 5rem;
-                font-size: 18vw;
-                line-height: 3.2rem;
-            }
-
-
-        }
-    }
-    
-    @media (max-width: 319px) {
-          &__info-wrapper {
-          
             &__h1 {
                 font-size: 2rem;
                 font-size: 7.5vw;  
@@ -182,7 +193,7 @@
                 font-size: 3.2vw;
             }
 
-              &__number {
+                &__number {
                 font-size: 5rem;
                 font-size: 18vw;
             }
@@ -195,6 +206,7 @@
             }
         }
     }
-    
+
 }
+
 
