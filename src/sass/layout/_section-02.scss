@@ -65,7 +65,7 @@
                 margin-bottom: 0;
             }
 
-            &:hover {
+            &:hover  {
                 transform: translate(2px, -2px);
                 box-shadow: -8px 8px 0px rgba(46, 136, 232, 0.5); 
             }
@@ -101,7 +101,7 @@
 
             &__paragraph {
                 color: $secondary-text-color;
-                opacity: 0.7;
+                opacity: 0.6;
             }
    
         }
