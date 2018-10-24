@@ -1,8 +1,5 @@
 .site-section {
 
-    .wrapper-02 {
-        margin-top: 200px;
-    }
 
     &__section-title {
         box-sizing: border-box;
@@ -61,9 +58,16 @@
             min-height: 128px;
             padding: 24px 32px 24px 40px;
             margin-bottom: 24px;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
 
             &:last-of-type {
                 margin-bottom: 0;
+            }
+
+            &:hover {
+                transform: translate(2px, -2px);
+                box-shadow: -8px 8px 0px rgba(46, 136, 232, 0.5); 
             }
             
             &__title {
