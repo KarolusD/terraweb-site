@@ -56,12 +56,10 @@ gulp.task( 'images', function () {
 
 gulp.task('sprites', function () {
 	return gulp
-    .src("src/icons/svg/*.svg")
-	.pipe(svgSprite()) //You'll get an SVG file and a preview file showing how to use it
+    .src("src/icons/*.svg")
+	.pipe(svgSprite({mode:"symbols"})) //You'll get an SVG file and a preview file showing how to use it
     .pipe(gulp.dest("public/icons")) // Write the sprite-sheet + CSS + Preview
-    .pipe(filter("public/icons/**/*.svg")) // Filter out everything except the SVG file
-    .pipe(svg2png()) // Create a PNG
-    .pipe(gulp.dest("public/icons"));
+   
 });
 
 gulp.task( 'html', function () {

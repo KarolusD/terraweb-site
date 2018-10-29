@@ -1,33 +1,49 @@
- push*{
-    box-sizing: border-box;
+push* {
+  box-sizing: border-box;
 }
 
-html, body {
-    font-size: 10px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    overflow-x: hidden;
+html,
+body {
+  font-size: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  overflow-x: hidden;
 
-    ::-moz-selection { /* Code for Firefox */
+  ::-moz-selection {
+    /* Code for Firefox */
     color: $primary-text-color;
     background: $secondary-brand-lighter-color;
-    }
+  }
 
-    ::selection {
+  ::selection {
     color: $primary-text-color;
     background: $secondary-brand-lighter-color;
-    }
+  }
 }
 
 section {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-height: 812px;
-    max-height: none;
-    height: auto;
-    overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 640px;
+  max-height: 900px;
+  overflow: hidden;
+}
+
+.icon {
+  display: inline;
+  display: inline-block;
+}
+
+.icon-32 {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-64 {
+  width: 64px;
+  height: 64px;
 }

@@ -1,6 +1,21 @@
 
-.icon-google {
-	background-image: url('png/google.png');
+.icon-arrow-down {
+	background-image: url('png/arrow-down.png');
+	background-repeat: no-repeat;
+}
+
+.icon-arrow-right {
+	background-image: url('png/arrow-right.png');
+	background-repeat: no-repeat;
+}
+
+.icon-fb {
+	background-image: url('png/fb.png');
+	background-repeat: no-repeat;
+}
+
+.icon-g+ {
+	background-image: url('png/g+.png');
 	background-repeat: no-repeat;
 }
 
@@ -19,8 +34,8 @@
 	background-repeat: no-repeat;
 }
 
-.icon-terra-premium-ico {
-	background-image: url('png/terra-premium-ico.png');
+.icon-terra-premiumico {
+	background-image: url('png/terra-premiumico.png');
 	background-repeat: no-repeat;
 }
 
@@ -29,22 +44,7 @@
 	background-repeat: no-repeat;
 }
 
-.icon-terraweb {
-	background-image: url('png/terraweb.png');
-	background-repeat: no-repeat;
-}
-
-.icon-arrow-down-ico {
-	background-image: url('png/arrow-down-ico.png');
-	background-repeat: no-repeat;
-}
-
-.icon-arrow-right-ico {
-	background-image: url('png/arrow-right-ico.png');
-	background-repeat: no-repeat;
-}
-
-.icon-fb {
-	background-image: url('png/fb.png');
+.icon-terraweb-logo {
+	background-image: url('png/terraweb-logo.png');
 	background-repeat: no-repeat;
 }

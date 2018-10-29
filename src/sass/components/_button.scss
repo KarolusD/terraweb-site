@@ -1,42 +1,40 @@
 .button {
-    position: relative;
-    font-family: Montserrat, sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 2.1rem;
-    font-size: 1.4em;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    height: 4rem;
-    // width: 17.4rem;
-    padding: 0.8rem 3.2rem 0.9rem 3.2rem;
-    outline: none;
-    border: 2px solid transparent;
-    white-space: nowrap;
-    -webkit-appearance: none;
-    border-radius: 1px;
+  position: relative;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.1rem;
+  font-size: 1.4em;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  height: 4rem;
+  // width: 17.4rem;
+  padding: 0.8rem 3.2rem 0.9rem 3.2rem;
+  outline: none;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  border-radius: 1px;
 }
 
 .btn {
-    &--primary {
-        color: $primary-text-color;
-        background-color: $primary-brand-color;  
-        box-shadow: -4px 4px 0px rgba(46, 136, 232, 0.4);
-        transition: all .2s ease-in-out;
-        cursor: pointer;
-        &:hover {
-           transform: translate(2px, -2px);
-           box-shadow: -8px 8px 0px rgba(46, 136, 232, 0.5); 
-        }
-        
-        &:active,
-        &:focus {
-            
-            background-color: $secondary-brand-darker-color;
-           transform: translate(-2px, 2px);
-           box-shadow: -0px 0px 0px rgba(46, 136, 232, 0.3); 
-        }
+  &--primary {
+    color: $primary-text-color;
+    background-color: $primary-brand-color;
+    box-shadow: -4px 4px 0px rgba(46, 136, 232, 0.4);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      transform: translate(2px, -2px);
+      box-shadow: -8px 8px 0px rgba(46, 136, 232, 0.5);
     }
-}
 
+    &:active,
+    &:focus {
+      background-color: $secondary-brand-darker-color;
+      transform: translate(-2px, 2px);
+      box-shadow: -0px 0px 0px rgba(46, 136, 232, 0.3);
+    }
+  }
+}

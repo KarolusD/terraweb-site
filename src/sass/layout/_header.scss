@@ -1,196 +1,188 @@
-/* ============== SITE HEADER AND TOP NAVIGATION ============== */ 
+/* ============== SITE HEADER AND TOP NAVIGATION ============== */
 
 .site-header {
- position: fixed;
- z-index: 9999;
- top: 0;
- left: 0;
- width: 100vw;
- height: 80px;
- background-color: transparent;
- overflow: hidden;   
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  background-color: transparent;
+  overflow: hidden;
 
-    .site-logo {
-        position: relative;
-        float: left;
-        color: $primary-text-color;
-        font-size: 4rem;
-        margin-left: 8rem;
-        margin-top: 4rem;
-        cursor: pointer;
+  .site-logo {
+    position: relative;
+    float: left;
+    color: $primary-text-color;
+    font-size: 4rem;
+    width: 200px;
+    height: auto;
+    margin-left: 8rem;
+    margin-top: 4rem;
+    cursor: pointer;
+  }
+
+  .site-nav {
+    position: relative;
+    float: right;
+    margin-right: 5.4rem;
+    margin-top: 4rem;
+
+    &__list {
+      list-style-type: none;
+      height: auto;
     }
 
-    .site-nav {
-        position: relative;
-        float: right;  
-        margin-right: 5.4rem;
-        margin-top: 4rem;
-        
-        &__list {
-            list-style-type: none;  
-            height: auto;
-        }
+    &__item {
+      display: inline-block;
+      margin-right: 4.8rem;
+      vertical-align: center;
+      cursor: pointer;
 
-
-        &__item {
-            display: inline-block; 
-            margin-right: 4.8rem;
-            vertical-align: center;
-            cursor: pointer;
-
-            &:last-child {
-                margin-right: 0;
-            }
-
-        }
-
-        .active {
-            &:before {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                background-color: transparent;
-                border: 3px solid $primary-brand-color;
-                left: -0.3rem;
-                top: 0.6rem;
-                height: 1rem;
-                width: 1rem;
-            }
-        }
-        
-        &__link {
-            cursor: pointer;
-            padding: 0.6rem;
-            color: $primary-text-color;
-            text-decoration: none;
-            position: relative;
-
-             &:hover {
-                &::before {
-                    content: "";
-                    position: absolute;
-                    z-index: -1;
-                    background-color: transparent;
-                    border: 3px solid $primary-brand-color;
-                    left: -0.3rem;
-                    top: 0.6rem;
-                    height: 1rem;
-                    width: 1rem;
-                    opacity: 0.6;
-                }
-            }
-        
-        } 
-        
-        .site-hamburger {
-            z-index: 99999;
-            position: absolute;
-            width: 3.4rem;
-            height: 2.6rem;
-            top: 3.6rem;
-            right: 3.8rem;
-            display: none;
-
-            &__bar {
-                margin-left: auto; 
-                margin-right: 0;
-                border-bottom-left-radius: 0.3rem;
-                border-top-right-radius: 0.3rem;
-                border-top-left-radius: 0;
-                border-bottom-right-radius: 0;
-                margin-bottom: 0.8rem;
-                width: 3.2rem;
-                height: 0.3rem;
-                background-color: $primary-text-color;
-                &:last-child {
-                margin-bottom: 0;
-                }
-            }
-
-            .bar2 {
-                width: 2rem;
-                height: 0.3rem;
-            }
-
-            .bar3 {
-                width: 2.7rem;
-                height: 0.3rem;
-            }
-        }
-
-        
+      &:last-child {
+        margin-right: 0;
+      }
     }
+
+    .active {
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-color: transparent;
+        border: 3px solid $primary-brand-color;
+        left: -0.3rem;
+        top: 0.6rem;
+        height: 1rem;
+        width: 1rem;
+      }
+    }
+
+    &__link {
+      cursor: pointer;
+      padding: 0.6rem;
+      color: $primary-text-color;
+      text-decoration: none;
+      position: relative;
+
+      &:hover {
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          background-color: transparent;
+          border: 3px solid $primary-brand-color;
+          left: -0.3rem;
+          top: 0.6rem;
+          height: 1rem;
+          width: 1rem;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    .site-hamburger {
+      z-index: 99999;
+      position: absolute;
+      width: 3.4rem;
+      height: 2.6rem;
+      top: 3.6rem;
+      right: 3.8rem;
+      display: none;
+
+      &__bar {
+        margin-left: auto;
+        margin-right: 0;
+        border-bottom-left-radius: 0.3rem;
+        border-top-right-radius: 0.3rem;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 0.8rem;
+        width: 3.2rem;
+        height: 0.3rem;
+        background-color: $primary-text-color;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .bar2 {
+        width: 2rem;
+        height: 0.3rem;
+      }
+
+      .bar3 {
+        width: 2.7rem;
+        height: 0.3rem;
+      }
+    }
+  }
 }
 
-
 .site-header {
+  @media (max-width: 1199px) {
+    .site-nav__list {
+      display: inherit;
+    }
 
-    @media (max-width: 1199px) {
-        .site-nav__list {
-            display: inherit;
-        } 
-    
-        .site-nav__item {
-            margin-right: 2.4rem;
-            &:last-child {
-                margin-right: 0;
-            }
-        } 
-         
-        .site-logo {
-            margin-left: 6rem;
-        }
+    .site-nav__item {
+      margin-right: 2.4rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
-    
-    @media (max-width: 1024px) {
-      height: 120px;
 
-        .site-nav {
-            display: block; 
-            float: none;
-            margin: 0;
-            margin-top: 10rem;
-            text-align: center;
-        } 
-    
-        .site-logo {
-            display: block;
-            margin: 0;
-            top: 4rem;
-            left: 50%;
-            transform: translateX(-50%);  
-        }
+    .site-logo {
+      margin-left: 6rem;
     }
-    
-    @media (max-width: 765px) {
-        height: 80px;
-        
-        .site-nav {
-           margin: 0;
-        } 
-        .site-nav__list {
-            display: none !important;
-        } 
+  }
 
-        .site-hamburger {
-            display: block !important;
-        }
-    
-    }
-    
-    @media (max-width: 419px) {
+  @media (max-width: 1024px) {
+    height: 120px;
 
-        .site-logo {
-            left: 10%;
-            transform: none;
-        }
+    .site-nav {
+      display: block;
+      float: none;
+      margin: 0;
+      margin-top: 10rem;
+      text-align: center;
     }
-    
-    @media (max-width: 319px) {
-        .icon-terraweb {
-            width: 150px !important;
-            width: 50vw !important;
-        }
-        
+
+    .site-logo {
+      display: block;
+      margin: 0;
+      top: 4rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
+  }
+
+  @media (max-width: 765px) {
+    height: 80px;
+
+    .site-nav {
+      margin: 0;
+    }
+    .site-nav__list {
+      display: none !important;
+    }
+
+    .site-hamburger {
+      display: block !important;
+    }
+  }
+
+  @media (max-width: 419px) {
+    .site-logo {
+      left: 10%;
+      transform: none;
+    }
+  }
+
+  @media (max-width: 319px) {
+    .icon-terraweb {
+      width: 150px !important;
+      width: 50vw !important;
+    }
+  }
 }
