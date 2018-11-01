@@ -1,0 +1,37 @@
+.site-section {
+
+
+    .flex-wrapper {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: auto;
+        max-width: 90%;
+        &__offer-item {
+            font-size: 48px;
+            box-sizing: border-box;
+            width: 33.3%;
+            height: auto;
+            min-height: 200px;
+            background-color: $secondary-bg-color;
+            margin-right: 29px;
+            padding: 24px 32px;
+            overflow: hidden;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            .offer-item__title {
+                margin: 16px 0;
+            }
+        }
+    }
+    
+}

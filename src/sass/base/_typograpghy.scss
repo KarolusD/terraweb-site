@@ -76,3 +76,69 @@ p {
   letter-spacing: 0.1rem;
   color: $primary-text-color;
 }
+
+.number {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 6.4rem;
+  font-size: 8.1rem;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.05);
+
+  &--corner-number {
+    position: absolute;
+    display: block !important;
+    left: -33vw;
+    top: 16px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: url(../images/jowisz-image.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 132px;
+      height: 140px;
+      z-index: -1;
+      opacity: 1 !important;
+      left: 56px;
+      top: -30px;
+
+      @media (max-width: 1198px) {
+        width: 100px;
+        height: 108px;
+      }
+  
+      @media (max-width: 765px) {
+        display: none;
+      }
+    }
+  }
+
+    @media (max-width: 1198px) {
+      left: -25vw;
+    }
+
+    @media (max-width: 1023px) {
+      left: -23.5vw;
+    }
+
+    @media (max-width: 765px) {
+      left: 8px;
+      top: -8px;
+      font-size: 6.8rem !important;
+    }
+
+    @media (max-width: 419px) {
+      font-size: 5rem !important;
+      font-size: 18vw !important;
+      line-height: 3.2rem !important;
+    }
+
+    @media (max-width: 319px) {
+      font-size: 5rem !important;
+      font-size: 18vw !important;
+    }
+}

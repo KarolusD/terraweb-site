@@ -1,4 +1,4 @@
-.button {
+.btn {
   position: relative;
   font-family: Montserrat, sans-serif;
   font-style: normal;
@@ -9,16 +9,12 @@
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   height: 4rem;
-  // width: 17.4rem;
   padding: 0.8rem 3.2rem 0.9rem 3.2rem;
   outline: none;
   border: 2px solid transparent;
   white-space: nowrap;
   -webkit-appearance: none;
   border-radius: 1px;
-}
-
-.btn {
   &--primary {
     color: $primary-text-color;
     background-color: $primary-brand-color;

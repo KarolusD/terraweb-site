@@ -1,11 +1,17 @@
 .site-section {
-  .image-02 {
+  .image--under {
     background: url(../images/mars-image.png);
     background-attachment: none;
     background-size: contain;
     background-repeat: no-repeat;
     left: 10%;
     top: -30%;
+    height: 324px;
+    width: 324px;
+
+    @media(max-width: 1023px) {
+      left: -10%;
+    }
 
     &:after {
       display: none;
@@ -17,18 +23,10 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 8%;
+    top: 10%;
     padding: 32px;
     text-align: center;
     white-space: nowrap;
-
-    .title-number {
-      display: block;
-      position: absolute !important;
-      left: 0;
-      line-height: 4rem;
-      display: none;
-    }
 
     &:before {
       content: "";
@@ -51,6 +49,14 @@
       width: 45%;
       height: 45%;
     }
+
+    .section-title__number {
+      display: none !important;
+
+      @media (max-width: 765px) {
+        display: block !important;
+      } 
+    }
   }
 
   &__aside {
@@ -64,8 +70,7 @@
     width: 28vw;
     margin-left: 80px;
 
-    &__tiles {
-      flex: 1;
+    .aside__tiles {
       position: relative;
       box-sizing: border-box;
       background-color: $secondary-bg-color;
@@ -87,7 +92,7 @@
         box-shadow: -8px 8px 0px rgba(46, 136, 232, 0.5);
       }
 
-      &__title {
+      .tiles__title {
         margin-bottom: 16px;
         position: relative;
         z-index: 1;
@@ -118,7 +123,7 @@
         }
       }
 
-      &__paragraph {
+      .tiles__paragraph {
         color: $secondary-text-color;
         opacity: 0.6;
       }
@@ -132,7 +137,7 @@
   }
   @media (max-width: 1359px) {
     &__section-title {
-      top: 5%;
+      top: 6%;
     }
 
     .wrapper-02 {
@@ -156,11 +161,12 @@
       align-items: stretch !important;
       width: 100%;
 
-      &__tiles {
+      .aside__tiles {
         width: 360px;
         margin: 0;
         margin-right: 24px;
         height: auto;
+        overflow: hidden;
 
         &:last-of-type {
             margin-right: 0;
@@ -197,7 +203,7 @@
         display: none;
       }
 
-      &__tiles {
+      .aside__tiles {
         width: 360px;
         height: auto;
         margin-right: 24px;
@@ -215,26 +221,23 @@
     .wrapper-02 {
       flex-direction: row !important;
       justify-content: flex-start;
-      margin-top: 180px;
+      margin-top: 200px;
     }
 
     .article-02 {
       display: none;
     }
 
-    .title-number {
-      display: block;
-    }
+    
 
     &__aside {
       flex-direction: column;
       left: 0;
       flex-wrap: wrap;
       margin-top: 0;
-      flex: 1;
       width: auto;
 
-      &__tiles {
+      .aside__tiles {
         width: auto;
         margin-right: 0;
         margin-bottom: 24px;
@@ -250,8 +253,8 @@
       font-size: 4vw;
     }
     &__aside {
-      &__tiles {
-        &__title {
+      .aside__tiles {
+        .tiles__title {
           padding-right: 72px;
         }
       }
@@ -260,8 +263,8 @@
 
   @media (max-width: 319px) {
     &__aside {
-      &__tiles {
-        &__title {
+      .aside__tiles {
+        .tiles__title {
           padding-right: 0px;
         }
       }

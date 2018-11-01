@@ -64,7 +64,8 @@ gulp.task('sprites', function () {
 
 gulp.task( 'html', function () {
 	return gulp
-    .src("./src/**/*.html")
+	.src("./src/**/*.html")
+	.pipe(wait(1000))
     .pipe(plumber())
     .pipe(gulp.dest("public/"));
 } );

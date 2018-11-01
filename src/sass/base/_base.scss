@@ -8,7 +8,9 @@ body {
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   font-style: normal;
+  
   overflow-x: hidden;
+
 
   ::-moz-selection {
     /* Code for Firefox */
@@ -20,7 +22,10 @@ body {
     color: $primary-text-color;
     background: $secondary-brand-lighter-color;
   }
+
+  
 }
+
 
 section {
   position: relative;
@@ -31,6 +36,7 @@ section {
   min-height: 640px;
   max-height: 900px;
   overflow: hidden;
+
 }
 
 .icon {
