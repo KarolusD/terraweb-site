@@ -15,22 +15,47 @@
   white-space: nowrap;
   -webkit-appearance: none;
   border-radius: 1px;
+  user-select: none;
   &--primary {
     color: $primary-text-color;
     background-color: $primary-brand-color;
     box-shadow: -4px 4px 0px rgba(46, 136, 232, 0.4);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-    &:hover {
-      transform: translate(2px, -2px);
-      box-shadow: -8px 8px 0px rgba(46, 136, 232, 0.5);
+    @media (hover: hover) {
+      &:hover {
+        transform: translate(2px, -2px);
+        box-shadow: -8px 8px 0px rgba(46, 136, 232, 0.5);
+      }
     }
+    
 
-    &:active,
-    &:focus {
+    &:active {
       background-color: $secondary-brand-darker-color;
       transform: translate(-2px, 2px);
       box-shadow: -0px 0px 0px rgba(46, 136, 232, 0.3);
+    }
+  }
+
+  &--secondary {
+    color: $primary-brand-color;
+    border: 2px solid $primary-brand-color;
+    background: transparent;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    @media (hover: hover) {
+      &:hover {
+        background: $primary-brand-color;
+        color: $primary-text-color;
+      }
+    }
+
+    &:active {
+      transform: scale(0.98);
+      color: $primary-text-color;
+      background-color: $secondary-brand-darker-color;
+      border: 2px solid $secondary-brand-darker-color;
     }
   }
 }

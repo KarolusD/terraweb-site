@@ -1,6 +1,10 @@
 .site-section {
     background-color: $primary-bg-color;
 
+     .distinction-color {
+        color: $primary-brand-color;
+    }
+
     @keyframes bouncingMouse {
         0%,
         20%,
@@ -26,6 +30,10 @@
         left: 50%;
         transform: translateX(-50%);
         animation: bouncingMouse 2s infinite;
+
+        @media(max-width: 1023px) {
+            display: none;
+        }
     }   
 
     
@@ -66,7 +74,7 @@
         height: auto;
         width: auto;
         max-width: 80%;
-        margin-top: 256px;
+        margin-top: 240px;
         margin-bottom: 64px;
         left: 10%;   
     }
@@ -83,10 +91,6 @@
             margin-right: 0;
             margin-left: auto;
             text-align: right;
-    
-            .distinction-color {
-                color: $primary-brand-color;
-            }
         }
     
         .article__paragraph {
@@ -147,7 +151,7 @@
             &__info-wrapper {
                 left: 50%;
                 transform: translateX(-50%); 
-                margin-top: 300px;
+                margin-top: 275px;
             }
 
             &__article {

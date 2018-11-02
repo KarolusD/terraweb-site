@@ -67,7 +67,7 @@ a,
   color: $primary-text-color;
 }
 
-p {
+p, li {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -104,7 +104,7 @@ p {
       z-index: -1;
       opacity: 1 !important;
       left: 56px;
-      top: -30px;
+      top: -40px;
 
       @media (max-width: 1198px) {
         width: 100px;
@@ -134,7 +134,6 @@ p {
     @media (max-width: 419px) {
       font-size: 5rem !important;
       font-size: 18vw !important;
-      line-height: 3.2rem !important;
     }
 
     @media (max-width: 319px) {
