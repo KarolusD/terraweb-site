@@ -23,11 +23,18 @@
             box-sizing: border-box;
             width: 33.3%;
             height: auto;
-            min-height: 200px;
+            min-height: 360px;
             max-width: 360px;
             background-color: $secondary-bg-color;
             margin-right: 29px;
             padding: 24px 32px;
+            overflow: hidden;
+
+            .distinction-color--word-break {
+                @media (max-width: 765px) {
+                    display: block;
+                }
+            }
             
 
             .main-color {
@@ -76,15 +83,16 @@
 
             .offer-item__list {
                color: $primary-text-color;
-               
+               margin-bottom: 81px;   
                
                 .list__item {
                 margin-bottom: 8px;
                 text-indent: -1.4rem;
                 text-align: left;
+                  
 
                     &:last-of-type {
-                        margin-bottom: 120px;        
+                        margin-bottom: 0;      
                     }
 
                     &:before {
@@ -104,7 +112,7 @@
                     &:after {
                         content:"";
                         position: absolute;
-                        // transform: translateX(50%);
+                        display: inline-block;
                         padding: 1.6rem 2.4rem;
                         text-align: center;
                         font-family: "Montserrat", sans-serif;
@@ -144,6 +152,7 @@
             flex-direction: column;
             align-items: center;
             width: 80vw;
+            margin-bottom: 80px;
             
             &__offer-item {
                 text-align: center;
@@ -153,14 +162,6 @@
                 margin-bottom: 24px;
                 max-width: 560px;
 
-                // &:last-of-type {
-                //     margin-bottom: 0;
-                // }
-
-                // .offer-item__list {
-                //     display: none;
-                // }
-
                  .offer-item__list {
                     margin-left: 5%;
                     .list__item {
@@ -168,26 +169,12 @@
                     }
 
                 }
-
-                // .offer-item__plus {
-                //     display: none;
-                // }
-
-                // .offer-item__title {
-                //     margin-bottom: 24px;
-                //     padding: 0;
-                // }
+               
                 .icon {
                     text-align: center;
                     display: inline-block;
                 }
             }
-
-            
-
-            // .btn {
-            //     display: none;
-            // }
         }
     }
     

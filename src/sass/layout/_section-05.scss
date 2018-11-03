@@ -1,0 +1,61 @@
+.section-05 {
+    min-height: 400px;
+    height: auto;
+    max-height: none;
+
+    .number--corner-number {
+       &:before {
+           background: url(../images/uranus-image.png);
+           background-size: contain;
+           background-repeat: no-repeat;
+           background-position: center;
+       }
+   }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .flex-wrapper__offer-item {
+        min-height: 200px;
+        max-height: none;
+        height: auto;
+        transition: all 300ms ease-in-out;
+        @media (hover: hover) and (min-width: 1024px) {
+            &:hover {
+                background: $primary-brand-color;
+    
+                .icon {
+                    display: none;
+                }
+                
+                .offer-item__paragraph {
+                    display: block;
+        
+                }
+            } 
+        }
+        .icon {
+            margin-top: 16px;
+        }
+        
+    }
+
+    .offer-item__title {
+        margin-bottom: 16px !important;
+    }
+
+    .offer-item__paragraph {
+        margin-top: 0;
+        position: relative;
+        display: none;
+        animation: fadeIn 300ms ease-in-out;
+
+        @media (max-width: 1023px) {
+                display: block;
+                animation: none; 
+                
+        }    
+    }
+}
