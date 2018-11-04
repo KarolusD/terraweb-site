@@ -13,10 +13,10 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.0",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "foundation-sites": "^6.5.0-rc.3",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-changed": "^3.1.0",
@@ -34,5 +34,9 @@
     "gulp-svg2png": "^2.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-wait": "0.0.2"
+  },
+  "dependencies": {
+    "photoswipe": "^4.1.2",
+    "swiper": "^4.4.2"
   }
 }
