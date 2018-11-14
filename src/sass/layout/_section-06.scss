@@ -7,7 +7,9 @@
         margin-top: 275px;
         flex-direction: row !important;
         align-items: baseline;
-        
+        @media (max-width: 765px) {
+            width: 90%;
+        }
 
         .article__cta {
             flex-wrap: nowrap;
@@ -19,7 +21,9 @@
         }
 
         @media(max-width: 1198px) {
+            margin-top: 300px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         @media(max-width: 765px) {
@@ -41,8 +45,9 @@
             height: 480px;
             margin-left: 0;
             margin-top: 80px;
-
         }
+
+        
     }
 
 

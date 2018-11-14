@@ -20,21 +20,21 @@
 
 </head>
 
-<body>
+<body class="main">
 
-    <header class="site-header">
+    <header data-aos="fade-down" class="site-header">
         <div class="site-logo logo">
             <a href="/">
                 <div class="icon-terraweb-logo" style="width: 180px; height: 21.26px;"></div>
             </a>
         </div>
-        <nav class="site-nav" id="nav">
-            <ul class="site-nav__list">
-                <li class="site-nav__item"><a href="#" class="site-nav__link active">początek</a></li>
-                <li class="site-nav__item"><a href="#" class="site-nav__link">czym się zajmujemy</a></li>
-                <li class="site-nav__item"><a href="#" class="site-nav__link">oferta</a></li>
-                <li class="site-nav__item"><a href="#" class="site-nav__link">portfolio</a></li>
-                <li class="site-nav__item"><a href="#" class="site-nav__link">kontakt</a></li>
+        <nav class="site-nav">
+            <ul class="site-nav__list" id="nav">
+                <li class="site-nav__item"><a href="#poczatek" class="site-nav__link active">początek</a></li>
+                <li class="site-nav__item"><a href="#czym-sie-zajmujemy" class="site-nav__link">czym się zajmujemy</a></li>
+                <li class="site-nav__item"><a href="#oferta" class="site-nav__link">oferta</a></li>
+                <li class="site-nav__item"><a href="#portfolio" class="site-nav__link">portfolio</a></li>
+                <li class="site-nav__item"><a href="#kontakt" class="site-nav__link">kontakt</a></li>
             </ul>
 
             <div class="site-hamburger">
@@ -45,13 +45,25 @@
         </nav>
     </header>
 
-    <section class="site-section section-01">
+    <div class="site-pagination">
+        <ul data-aos="fade-left" id="pagination" class="pagination">
+            <li class="pagination-item"><a class="active" href="#poczatek">01</a></li>
+            <li class="pagination-item"><a href="#czym-sie-zajmujemy">02</a></li>
+            <li class="pagination-item"><a href="#oferta">03</a></li>
+            <li class="pagination-item"><a href="#section-04">04</a></li>
+            <li class="pagination-item"><a href="#section-05">05</a></li>
+            <li class="pagination-item"><a href="#portfolio">06</a></li>
+            <li class="pagination-item"><a href="#kontakt">07</a></li>
+        </ul>    
+    </div>
 
-        <div class="site-section__image"></div>
+    <section id="poczatek" class="site-section section-01">
+
+        <div data-aos="zoom-out" class="site-section__image"></div>
 
         <div class="site-section__info-wrapper wrapper-01">
 
-            <article class="site-section__article">
+            <article data-aos="fade-right" class="site-section__article">
 
                 <h1 class="article__h1">
                     <span class="article__number number">01</span>
@@ -61,20 +73,20 @@
 
                 <div class="article__cta">
                     <p class="article__paragraph link">zbuduj swoją przyszłość z nami</p>
-                    <button id="meetUsBtn" class="article__btn btn btn--primary">poznaj nas</button>
+                    <button class="article__btn btn btn--primary czym-sie-zajmujemy">poznaj nas</button>
                 </div>
 
             </article>
 
         </div>
 
-        <div class="icon-scroll-ico" style="width: 32px; height: 32px;"></div>
+        <div class="icon-scroll-ico czym-sie-zajmujemy" style="width: 32px; height: 32px;"></div>
 
     </section>
 
-    <section class="site-section section-02">
+    <section data-aos="fade-up" id="czym-sie-zajmujemy" class="site-section section-02">
 
-        <h2 class="site-section__section-title">
+        <h2 class="site-section__section-title animation">
             <span class="section-title__number number number--corner-number">
                 02
             </span>
@@ -83,7 +95,7 @@
 
         <div class="site-section__info-wrapper wrapper-02">
 
-            <article class="site-section__article article-02">
+            <article data-aos="fade-right" class="site-section__article article-02">
 
                 <div class="site-section__image image--under"></div>
                 <h1 class="article__h1 article-02">
@@ -93,28 +105,28 @@
 
                 <div class="article__cta">
                     <p class="article__paragraph link">dobierz ofertę do swoich potrzeb</p>
-                    <button id="meetUsBtn" class="article__btn btn btn--primary">zobacz ofertę</button>
+                    <button class="article__btn btn btn--primary oferta">zobacz ofertę</button>
                 </div>
 
             </article>
 
             <aside class="site-section__aside aside-02">
 
-                <div class="aside__tiles">
+                <div data-aos="fade-up" class="aside__tiles tworzenie-stron-www">
                     <h3 class="tiles__title">tworzenie stron www</h3>
                     <p class="tiles__paragraph">Zajmujemy się profesjonalnym tworzeniem witryn
                         internetowych m.in. strony produktowe, blogi, strony "wizytówki".</p>
                     <div class="icon-arrow-right" style="width: 32px; height: 32px;"></div>
                 </div>
 
-                <div class="aside__tiles">
+                <div data-aos="fade-up" class="aside__tiles identyfikacja-wizualna">
                     <h3 class="tiles__title">identyfikacja wizualna</h3>
                     <p class="tiles__paragraph">Projektujemy logotypy, wizytówki, ulotki, rekalmy,
                         papier firmowy i wiele innych.</p>
                     <div class="icon-arrow-right" style="width: 32px; height: 32px;"></div>
                 </div>
 
-                <div class="aside__tiles">
+                <div data-aos="fade-up" class="aside__tiles uslugi-dodatkowe">
                     <h3 class="tiles__title">usługi dodatkowe</h3>
                     <p class="tiles__paragraph">Świadczymy również różne usługi dodatkowe, zajrzyj
                         tutaj, jeśli potrzebujesz czegoś więcej.</p>
@@ -127,17 +139,17 @@
 
     </section>
 
-    <section class="site-section section-03">
+    <section data-aos="fade-up" id="oferta" class="site-section section-03">
 
         <h2 class="site-section__section-title article">
-            <span class="article__number number number--corner-number">
+            <span data-aos="zoom-out-right" class="article__number number number--corner-number">
                 03
             </span>
             tworzenie stron www
         </h2>
 
         <div class="flex-wrapper">
-            <div class="flex-wrapper__offer-item">
+            <div data-aos="fade-right" class="flex-wrapper__offer-item">
                 <div class="icon-terra-mini-ico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">pakiet terra <span class="distinction-color distinction-color--word-break">mini</span></h3>
 
@@ -152,11 +164,11 @@
                     <li class="list__item">Galeria zdjęć</li>
                 </ul>
 
-                <button class="btn btn--secondary">zapytaj o ofertę</button>
+                <button class="btn btn--secondary kontakt">zapytaj o ofertę</button>
 
             </div>
 
-            <div class="flex-wrapper__offer-item offer-item--main">
+            <div data-aos="fade-up" class="flex-wrapper__offer-item offer-item--main">
                 <div class="icon-terra-standard-ico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">pakiet terra <span class="distinction-color distinction-color--word-break">standard</span></h3>
 
@@ -172,11 +184,11 @@
 
                 </ul>
 
-                <button class="btn btn--secondary main-color">zapytaj o ofertę</button>
+                <button class="btn btn--secondary main-color kontakt">zapytaj o ofertę</button>
 
             </div>
 
-            <div class="flex-wrapper__offer-item">
+            <div data-aos="fade-left" class="flex-wrapper__offer-item">
                 <div class="icon-terra-premiumico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">pakiet terra <span class="distinction-color distinction-color--word-break">premium</span></h3>
 
@@ -190,24 +202,24 @@
 
                 </ul>
 
-                <button class="btn btn--secondary">zapytaj o ofertę</button>
+                <button class="btn btn--secondary kontakt">zapytaj o ofertę</button>
 
             </div>
         </div>
 
     </section>
 
-    <section class="site-section section-04">
+    <section data-aos="fade-up" id="section-04" class="site-section section-04">
 
         <h2 class="site-section__section-title article">
-            <span class="article__number number number--corner-number">
+            <span data-aos="zoom-out-right" class="article__number number number--corner-number">
                 04
             </span>
             identyfikacja wizualna
         </h2>
 
         <div class="flex-wrapper">
-            <div class="flex-wrapper__offer-item">
+            <div data-aos="fade-right" class="flex-wrapper__offer-item">
                 <div class="icon-terra-mini-ico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">projekty logo</h3>
 
@@ -217,11 +229,11 @@
                     w zależności od potrzeb.
                 </p>
 
-                <button class="btn btn--secondary">zapytaj o ofertę</button>
+                <button class="btn btn--secondary kontakt">zapytaj o ofertę</button>
 
             </div>
 
-            <div class="flex-wrapper__offer-item">
+            <div data-aos="fade-up" class="flex-wrapper__offer-item">
                 <div class="icon-terra-standard-ico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">projekty wizytówek</h3>
 
@@ -232,11 +244,11 @@
                 </p>
 
 
-                <button class="btn btn--secondary">zapytaj o ofertę</button>
+                <button class="btn btn--secondary kontakt">zapytaj o ofertę</button>
 
             </div>
 
-            <div class="flex-wrapper__offer-item">
+            <div data-aos="fade-left" class="flex-wrapper__offer-item">
                 <div class="icon-terra-premiumico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">projekty do druku</h3>
 
@@ -246,7 +258,7 @@
                     w zależności od założeń danego projektu.
                 </p>
 
-                <button class="btn btn--secondary">zapytaj o ofertę</button>
+                <button class="btn btn--secondary kontakt">zapytaj o ofertę</button>
 
             </div>
 
@@ -254,17 +266,17 @@
 
     </section>
 
-    <section class="site-section section-05">
+    <section id="section-05" class="site-section section-05">
 
         <h2 class="site-section__section-title article">
-            <span class="article__number number number--corner-number">
+            <span data-aos="zoom-out-right" class="article__number number number--corner-number">
                 05
             </span>
             usługi dodatkowe
         </h2>
 
         <div class="flex-wrapper">
-            <div class="flex-wrapper__offer-item">
+            <div data-aos="fade-right" class="flex-wrapper__offer-item">
                 <div class="icon-terra-mini-ico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">social media</h3>
 
@@ -275,7 +287,7 @@
 
             </div>
 
-            <div class="flex-wrapper__offer-item">
+            <div data-aos="fade-up" class="flex-wrapper__offer-item">
                 <div class="icon-terra-standard-ico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">szablony aukcji allegro</h3>
 
@@ -287,7 +299,7 @@
 
             </div>
 
-            <div class="flex-wrapper__offer-item">
+            <div data-aos="fade-left" class="flex-wrapper__offer-item">
                 <div class="icon-terra-premiumico icon" style="width: 64px; height: 64px;"></div>
                 <h3 class="offer-item__title">Dodatkowe narzędzia web</h3>
 
@@ -301,10 +313,10 @@
 
     </section>
 
-    <section class="site-section section-06">
+    <section data-aos="fade-up" id="portfolio" class="site-section section-06">
 
         <h2 class="site-section__section-title">
-            <span class="section-title__number number number--corner-number">
+            <span data-aos="zoom-out-right" class="section-title__number number number--corner-number">
                 06
             </span>
             nasze projekty
@@ -312,7 +324,7 @@
 
         <div class="site-section__info-wrapper wrapper-02 wrapper-06">
 
-            <article class="site-section__article article-02 article-06">
+            <article data-aos="fade-right" class="site-section__article article-02 article-06">
 
                 <div class="site-section__image image--under"></div>
                 <h1 class="article__h1 article-02 article-06">
@@ -321,39 +333,38 @@
                 </h1>
 
                 <div class="article__cta">
-                    <p class="article__paragraph link">dobierz ofertę do swoich potrzeb</p>
-                    <button id="meetUsBtn" class="article__btn btn btn--primary">zobacz ofertę</button>
+                    <p class="article__paragraph link">jesteś zainteresowany współpracą?</p>
+                    <button class="article__btn btn btn--primary kontakt">skontaktuj się</button>
                 </div>
 
             </article>
 
-            <aside class="site-section__aside aside-06">
+            <aside data-aos="fade-left" class="site-section__aside aside-06">
 
                 <div class="swiper-container">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide">
-                            <div class="swiper-slide" style="background-image:url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/churning.jpeg)">
-                                <div class="project-desc">
-                                    <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
-                                    <div class="text" data-swiper-parallax="-100">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Opis projektu tutaj</p>
-                                    </div>
+                        
+                        <div id="1" class="swiper-slide" style="background-image:url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/churning.jpeg)">
+                            <div class="project-desc">
+                                <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+                                <div class="text" data-swiper-parallax="-100">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Opis projektu tutaj</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-slide" style="background-image:url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/29759342597_1acc62974d_o.jpg)">
-                                <div class="project-desc title">
-                                    <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
-                                    <div class="text" data-swiper-parallax="-100">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Opis projektu tutaj</p>
-                                    </div>
+                        
+                        <div id="2" class="swiper-slide" style="background-image:url(https://i.pinimg.com/originals/ec/b9/f1/ecb9f1b33ebeacc1088392bf065f58e2.jpg)">
+                            <div class="project-desc title">
+                                <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+                                <div class="text" data-swiper-parallax="-100">
+                                    <p>Długie zdjęcie test, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Opis projektu tutaj</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide" style="background-image:url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss056e162821.jpg)">
+                     
+                        <div id="3" class="swiper-slide" style="background-image:url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/iss056e162821.jpg)">
                             <div class="project-desc title">
                                 <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
                                 <div class="text" data-swiper-parallax="-100">
@@ -369,53 +380,105 @@
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
-
+                    
                 </div>
             </aside>
-
+            
         </div>
+        
+        <div id="fullscreen-swiper-backdrop"></div>
+        <div id="fullscreen-swiper"></div>
 
     </section>
 
+     <section id="kontakt" class="site-section section-07">
 
+        <div data-aos="zoom-in">
 
-    <script src="js/app.js"></script>
+            <h2 class="site-section__section-title article">
+                <span data-aos="zoom-out-right"class="article__number number number--corner-number">
+                    07
+                </span>
+                skontaktuj się
+            </h2>
+    
+            <div class="site-section__info-wrapper">
+            
+                <article data-aos="fade-right" class="site-section__article article-07">
+                    
+                    <div class="contact">
+                        <h2 class="contact__title">kontakt</h2>
+    
+                        <h3 class="contact__subtitle">e-mail</h3>
+                        <p class="contact__info">terraweb@mail.pl</p>
+                        <p class="contact__info">terraweb2@mail.pl</p>
+    
+                        <h3 class="contact__subtitle">telefon</h3>
+                        <p class="contact__info">+48 111 111 111</p>
+                        <p class="contact__info">+48 222 222 222</p>
+                    </div>
+    
+                </article>
+            
+                <aside data-aos="fade-left" class="site-section__aside aside-07">
+                    
+                    <form autocomplete="off" class="contact-form">
+                        <label for="input-name">Podaj swoje imię</label>
+                        <input autocomplete="nope" type="text" id="input-name" required/>
+    
+                        <label for="input-number">Twój numer kontaktowy</label>
+                        <input autocomplete="nope" type="tel" id="input-number"/>
+    
+                        <label for="input-email">Podaj swój e-mail</label>
+                        <input type="email" id="input-email" required />
+                        
+                        <label for="textarea-1">Napisz co Cię interesuję</label>
+                        <textarea autocomplete="nope" id="textarea-1" required></textarea>
+                        
+                        <button type="submit" id="send" class="button article__btn btn btn--secondary large fl-toggle">wyślij wiadomość</button>
+    
+                    </form>
+    
+                
+                </aside>
+            
+            </div>
+        </div>
+        
+
+        
+
+    </section>
+
+    <script src="js/vendor/smooth-scroll.js"></script>
+    <script src="js/vendor/aos.js"></script>
     <script src="js/vendor/swiper.min.js"></script>
+    <script src="js/vendor/float-labels.js"></script>
+    <script src="js/app.js"></script>
 
     <script>
-        var mySwiper = new Swiper('.swiper-container', {
-            // Optional parameters
-            direction: 'horizontal',
-            loop: true,
-            speed: 600,
-            parallax: true,
+        var floatlabels = new FloatLabels('form', {
+            customEvent: null,
+            customLabel: null,
+            customPlaceholder: null,
+            exclude: '.no-label',
+            inputRegex: /email|number|password|search|tel|text|url/,
+            prefix: 'fl-',
+            prioritize: 'label',
+            requiredClass: 'required',
+            style: 1,
+            transform: 'input, select, textarea',
+            });
 
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-            },
+        var scroll = new SmoothScroll('a[href*="#"]', {
+                speed: 500,
+                speedAsDuration: true
+            });
 
-            // If we need pagination
-            pagination: {
-                el: '.swiper-pagination',
-                dynamicBullets: true,
-            },
+        AOS.init();
 
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        })
     </script>
-
+ 
 </body>
 
 </html>

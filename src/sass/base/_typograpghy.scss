@@ -64,10 +64,9 @@ a,
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  color: $primary-text-color;
 }
 
-p, li {
+p, li, label, textarea, select, input {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;

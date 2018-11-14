@@ -5,8 +5,7 @@ var
 	wait = require('gulp-wait');	
 	plumber = require('gulp-plumber');
 	svgSprite = require("gulp-svg-sprites");
-	filter = require('gulp-filter');
-	svg2png = require('gulp-svg2png');
+	babel = require('gulp-babel');	
 
 
 gulp.task( 'styles', function () {
@@ -22,19 +21,19 @@ gulp.task( 'styles', function () {
 } );
 
 gulp.task('vendorScripts', function() {
-	gulp.src('./src/js/vendor/**/*.js')
-			.pipe(plumber())
-			.pipe(gulp.dest('public/js/vendor'));
+	gulp
+    .src("./src/js/vendor/**/*.js")
+	.pipe(babel())
+    .pipe(plumber())
+    .pipe(gulp.dest("public/js/vendor"));
 });
 
 gulp.task( 'scripts', function () {
 	return gulp
-    .src(["./src/js/!(vendor)**/!(app)*.js", "./src/js/app.js"])
-    .pipe($.plumber())
-    .pipe($.babel())
+    .src(["./src/js/!(vendor)**/!(app)*.js", "./src/js/scripts/*.js"])
+    .pipe(babel())
     .pipe($.concat("app.js"))
-    .pipe($.uglify())
-    .pipe(plumber())
+    .pipe(gulp.dest("src/js"))
     .pipe(gulp.dest("public/js"))
     .pipe(browserSync.reload({ stream: true }));
 } );
@@ -92,7 +91,7 @@ gulp.task( 'watch', function () {
 	// Watch .sass files
 	gulp.watch( 'src/sass/**/*.scss', ['styles', browserSync.reload] );
 	// Watch .js files
-	gulp.watch( 'src/js/*.js', ['scripts', browserSync.reload] );
+	gulp.watch( 'src/js/*/*.js', ['scripts', browserSync.reload] );
 	// Watch .js files
 	gulp.watch( 'src/js/vendor/*', ['vendorScripts', browserSync.reload] );
 	// Watch image files

@@ -178,6 +178,10 @@
   background-size: 48px 48px;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media(max-width: 419px) {
+    display: none;
+  }
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -282,11 +286,13 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   display: inline-block;
   background: $primary-brand-color;
   opacity: 0.3;
+  padding: 4px;
+  box-sizing: border-box;
 }
 button.swiper-pagination-bullet {
   border: none;
@@ -632,6 +638,10 @@ button.swiper-pagination-bullet {
 
 .project-desc {
   z-index: 999999;
+
+  @media (max-width: 319px) {
+    display: none;
+  }
   .subtitle {
     margin-bottom: 8px;
     text-shadow: 0 2px 2px rgba(0,0,0,0.35);
@@ -652,8 +662,86 @@ button.swiper-pagination-bullet {
   
 
   @media (max-width: 1198px) {
+    width: 80%;
     top: 240px;
     
   }
+
+  @media (max-width: 419px) {
+    padding: 16px 64px 16px 24px;
+  }
   
 }
+
+#fullscreen-swiper {
+  display: none;
+  // overflow: hidden;
+  position: fixed;
+  top: 5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  height: auto;
+ 
+  .swiper-slide {
+    min-height: 640px;
+    background-size: contain;
+
+    .subtitle {
+      display: none;
+    }
+
+    .project-desc {
+      display: none;
+    }
+  }
+}
+
+#fullscreen-swiper .swiper-slide img {
+  height: 75vh;
+  max-height: 650px;
+}
+
+#fullscreen-swiper-backdrop {
+  background: #000;
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  
+}
+
+#fullscreen-swiper-close {
+  position: absolute;
+  right: 40px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 10000;
+}
+#fullscreen-swiper-close:hover {
+  opacity: 1;
+}
+#fullscreen-swiper-close:before, 
+#fullscreen-swiper-close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 23px;
+  width: 2px;
+  background-color: #fff;
+}
+#fullscreen-swiper-close:before {
+  transform: rotate(45deg);
+}
+#fullscreen-swiper-close:after {
+  transform: rotate(-45deg);
+}
+
+.no-scroll {height: 100vh; overflow: hidden}
