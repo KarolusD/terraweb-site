@@ -1,10 +1,12 @@
+<?php include('contact.php'); ?>
 <!DOCTYPE html>
 <html lang="pl">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
-    <title>Terraweb site</title>
+    <title>Terraweb.pl</title>
+    <meta name="description" content="Tworzymy wasze strony internetowe. Zbuduj swoją przyszłośc z nami.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
 
@@ -436,21 +438,28 @@
             
                 <aside data-aos="fade-left" class="site-section__aside aside-07">
                     
-                    <form autocomplete="off" class="contact-form">
+                    <form autocomplete="off" class="contact-form" method="post" action="#kontakt">
                         <label for="input-name">Podaj swoje imię</label>
-                        <input autocomplete="nope" type="text" id="input-name" required/>
+                        <input name='name' autocomplete="nope" type="text" id="input-name" <?=$sName ? "value='$sName'": ""?>/>
     
                         <label for="input-number">Twój numer kontaktowy</label>
-                        <input autocomplete="nope" type="tel" id="input-number"/>
+                        <input name='phone' autocomplete="nope" type="tel" id="input-number" <?=$sNumber ? "value='$sNumber'": ""?>/>
     
                         <label for="input-email">Podaj swój e-mail</label>
-                        <input type="email" id="input-email" required />
+                        <input name='email' type="email" id="input-email" <?=$sEmail ? "value='$sEmail'": ""?>/>
                         
                         <label for="textarea-1">Napisz co Cię interesuję</label>
-                        <textarea autocomplete="nope" id="textarea-1" required></textarea>
+                        <textarea name='message' autocomplete="nope" id="textarea-1"><?=$sMessage ? $sMessage: ""?></textarea>
                         
                         <button type="submit" id="send" class="button article__btn btn btn--secondary large fl-toggle">wyślij wiadomość</button>
-    
+
+                        <?php if($bErrorName) : ?>
+                        <?php foreach($aMessageReturn as $sMessage) : ?>
+                        <p><?=$sMessage?></p>
+                        <?php endforeach; ?>
+                        <?php else: ?>
+                        <p>Wiadomość poprawnie wysłana</p>
+                        <?php endif; ?>
                     </form>
     
                 
