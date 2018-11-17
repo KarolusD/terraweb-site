@@ -65,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $aMessageReturn[] = "Wystąpił błąd serwera, prosimy o ponowną próbę";
         } else {
             $bErrorName = false;
+            header("Location: http://".$_SERVER['HTTP_HOST']."/?send=true#kontakt");
         }
     } else {
         $sEmail = $_POST['email'] ?? "";
