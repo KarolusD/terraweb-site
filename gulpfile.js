@@ -1,12 +1,13 @@
-var
-	gulp = require( 'gulp' ),
-	browserSync = require( 'browser-sync' ),
-	$ = require( 'gulp-load-plugins' )( {lazy: true} );
-	wait = require('gulp-wait');	
-	plumber = require('gulp-plumber');
-	svgSprite = require("gulp-svg-sprites");
-	babel = require('gulp-babel');	
-
+var gulp = require("gulp"),
+  browserSync = require("browser-sync"),
+  $ = require("gulp-load-plugins")({ lazy: true }),
+  wait = require("gulp-wait"),
+  plumber = require("gulp-plumber"),
+  svgSprite = require("gulp-svg-sprites"),
+  babel = require("gulp-babel"),
+  uglify = require("gulp-uglify"),
+  pump = require("pump");
+	
 
 gulp.task( 'styles', function () {
 	return gulp
@@ -23,17 +24,20 @@ gulp.task( 'styles', function () {
 gulp.task('vendorScripts', function() {
 	gulp
     .src("./src/js/vendor/**/*.js")
-	.pipe(babel())
-    .pipe(plumber())
-    .pipe(gulp.dest("public/js/vendor"));
+	.pipe(plumber())
+	.pipe(uglify())
+	.pipe(gulp.dest("public/js/vendor"));
 });
 
 gulp.task( 'scripts', function () {
 	return gulp
     .src(["./src/js/!(vendor)**/!(app)*.js", "./src/js/scripts/*.js"])
-    .pipe(babel())
-    .pipe($.concat("app.js"))
+	.pipe(babel({
+		presets: ['@babel/preset-env']
+	}))
+	.pipe($.concat("app.js"))
     .pipe(gulp.dest("src/js"))
+	.pipe(uglify())
     .pipe(gulp.dest("public/js"))
     .pipe(browserSync.reload({ stream: true }));
 } );
@@ -83,6 +87,8 @@ gulp.task( 'deploy', function () {
 		.src( './public/**/*' )
 		.pipe( ghPages() );
 } );
+
+
 
 gulp.task( 'watch', function () {
 	// Watch .html files
