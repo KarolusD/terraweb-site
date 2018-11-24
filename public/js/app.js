@@ -2,9 +2,15 @@
 
 function fadeIn(el) {
   el.style.opacity = 0;
+<<<<<<< HEAD
   var last = +new Date();
 
   var tick = function tick() {
+=======
+  let last = +new Date();
+
+  let tick = function () {
+>>>>>>> feature-contact
     el.style.opacity = +el.style.opacity + (new Date() - last) / 400;
     last = +new Date();
 
@@ -18,6 +24,7 @@ function fadeIn(el) {
 
 function fadeOut(el) {
   el.style.opacity = 1;
+<<<<<<< HEAD
   var last = +new Date();
 
   var tick = function tick() {
@@ -125,6 +132,101 @@ function fadeOut(el) {
   var siteHeader = document.querySelector('.site-header');
   window.addEventListener('scroll', function () {
     var currentScrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+=======
+  let last = +new Date();
+
+  let tick = function () {
+    el.style.opacity = +el.style.opacity - (new Date() - last) / 400;
+    last = +new Date();
+
+    if (+el.style.opacity > 0) {
+      window.requestAnimationFrame && requestAnimationFrame(tick) || setTimeout(tick, 16);
+    }
+  };
+
+  tick();
+} // Scrolling to Section
+(function allClicks() {
+  function allButtonsClicks() {
+    let allClickableElements = document.querySelectorAll('.czym-sie-zajmujemy, .oferta, .kontakt, .tworzenie-stron-www, .identyfikacja-wizualna, .uslugi-dodatkowe');
+    let hamburger = document.querySelector('.site-hamburger');
+    let hamburgerMenu = document.querySelector('.hamburger-menu');
+
+    function closeHamburgerMenu() {
+      hamburger.classList.remove('site-hamburger--open');
+      hamburgerMenu.classList.remove('hamburger-menu--open');
+    }
+
+    hamburger.onclick = function () {
+      hamburger.classList.toggle('site-hamburger--open');
+      hamburgerMenu.classList.toggle('hamburger-menu--open');
+      let isOpen = true;
+      window.addEventListener('scroll', function (evt) {
+        window.lastScrollTime = new Date().getTime();
+
+        if (isScrolling()) {
+          isOpen = false;
+          closeHamburgerMenu();
+        }
+      });
+
+      function isScrolling() {
+        if (isOpen) {
+          return window.lastScrollTime && new Date().getTime() < window.lastScrollTime + 500;
+        } else {
+          return false;
+        }
+      }
+    };
+
+    Array.from(allClickableElements).forEach(element => {
+      element.addEventListener('click', () => {
+        if (element.classList.contains('czym-sie-zajmujemy')) {
+          let scroll = new SmoothScroll();
+          let anchor = document.querySelector('.section-02');
+          scroll.animateScroll(anchor);
+        }
+
+        if (element.classList.contains('oferta')) {
+          let scroll = new SmoothScroll();
+          let anchor = document.querySelector('.section-03');
+          scroll.animateScroll(anchor);
+        }
+
+        if (element.classList.contains('kontakt')) {
+          let scroll = new SmoothScroll();
+          let anchor = document.querySelector('.section-07');
+          scroll.animateScroll(anchor);
+        }
+
+        if (element.classList.contains('tworzenie-stron-www')) {
+          let scroll = new SmoothScroll();
+          let anchor = document.querySelector(".section-03");
+          scroll.animateScroll(anchor);
+        }
+
+        if (element.classList.contains('identyfikacja-wizualna')) {
+          let scroll = new SmoothScroll();
+          let anchor = document.querySelector(".section-04");
+          scroll.animateScroll(anchor);
+        }
+
+        if (element.classList.contains('uslugi-dodatkowe')) {
+          let scroll = new SmoothScroll();
+          let anchor = document.querySelector(".section-05");
+          scroll.animateScroll(anchor);
+        }
+      });
+    });
+  }
+
+  allButtonsClicks();
+})();
+(function headerFixed() {
+  let siteHeader = document.querySelector('.site-header');
+  window.addEventListener('scroll', function () {
+    let currentScrollPos = document.documentElement.scrollTop;
+>>>>>>> feature-contact
 
     if (currentScrollPos > 30) {
       siteHeader.classList.add("site-header--active");
@@ -194,6 +296,7 @@ function fadeOut(el) {
 
     function changeActiveNavItem() {
       // navigation
+<<<<<<< HEAD
       var nav = document.getElementById('nav');
       var navItems = Array.from(nav.getElementsByTagName('a')); // navigation inside hamburger menu
 
@@ -213,12 +316,34 @@ function fadeOut(el) {
         });
         nav2Items[0].classList.add("active");
         pagItems.forEach(function (element) {
+=======
+      let nav = document.getElementById('nav');
+      let navItems = Array.from(nav.getElementsByTagName('a')); // navigation inside hamburger menu
+
+      let nav2 = document.getElementById('nav2');
+      let nav2Items = Array.from(nav2.getElementsByTagName('a')); // pagination
+
+      let pag = document.getElementById('pagination');
+      let pagItems = Array.from(pag.getElementsByTagName("a"));
+
+      if (getTopElemPos(section01) <= 300 && getTopElemPos(section01) >= -200 && !navItems[0].classList.contains("active") && !nav2Items[0].classList.contains("active") && !pagItems[0].classList.contains("active")) {
+        navItems.forEach(element => {
+          element.classList.remove("active");
+        });
+        navItems[0].classList.add("active");
+        nav2Items.forEach(element => {
+          element.classList.remove("active");
+        });
+        nav2Items[0].classList.add("active");
+        pagItems.forEach(element => {
+>>>>>>> feature-contact
           element.classList.remove("active");
         });
         pagItems[0].classList.add("active");
       }
 
       if (getTopElemPos(section02) <= 300 && getTopElemPos(section02) >= -200 && !navItems[1].classList.contains("active") && !nav2Items[1].classList.contains("active") && !pagItems[1].classList.contains("active")) {
+<<<<<<< HEAD
         navItems.forEach(function (element) {
           element.classList.remove("active");
         });
@@ -228,12 +353,24 @@ function fadeOut(el) {
         });
         nav2Items[1].classList.add("active");
         pagItems.forEach(function (element) {
+=======
+        navItems.forEach(element => {
+          element.classList.remove("active");
+        });
+        navItems[1].classList.add("active");
+        nav2Items.forEach(element => {
+          element.classList.remove("active");
+        });
+        nav2Items[1].classList.add("active");
+        pagItems.forEach(element => {
+>>>>>>> feature-contact
           element.classList.remove("active");
         });
         pagItems[1].classList.add("active");
       }
 
       if (getTopElemPos(section03) <= 300 && getTopElemPos(section03) >= -200 && !navItems[2].classList.contains("active") && !nav2Items[2].classList.contains("active") && !pagItems[2].classList.contains("active")) {
+<<<<<<< HEAD
         navItems.forEach(function (element) {
           element.classList.remove("active");
         });
@@ -243,20 +380,39 @@ function fadeOut(el) {
         });
         nav2Items[2].classList.add("active");
         pagItems.forEach(function (element) {
+=======
+        navItems.forEach(element => {
+          element.classList.remove("active");
+        });
+        navItems[2].classList.add("active");
+        nav2Items.forEach(element => {
+          element.classList.remove("active");
+        });
+        nav2Items[2].classList.add("active");
+        pagItems.forEach(element => {
+>>>>>>> feature-contact
           element.classList.remove("active");
         });
         pagItems[2].classList.add("active");
       }
 
       if (getTopElemPos(section04) <= 300 && getTopElemPos(section04) >= -200 && !pagItems[3].classList.contains("active")) {
+<<<<<<< HEAD
         pagItems.forEach(function (element) {
+=======
+        pagItems.forEach(element => {
+>>>>>>> feature-contact
           element.classList.remove('active');
         });
         pagItems[3].classList.add("active");
       }
 
       if (getTopElemPos(section05) <= 300 && getTopElemPos(section05) >= -200 && !pagItems[4].classList.contains("active")) {
+<<<<<<< HEAD
         pagItems.forEach(function (element) {
+=======
+        pagItems.forEach(element => {
+>>>>>>> feature-contact
           element.classList.remove('active');
         });
         pagItems[4].classList.add("active");
@@ -266,6 +422,7 @@ function fadeOut(el) {
         nav2Items[3].classList.remove("active");
       }
 
+<<<<<<< HEAD
       console.log(getTopElemPos(section06));
 
       if (getTopElemPos(section06) <= 310 && getTopElemPos(section06) >= -100 && !navItems[3].classList.contains("active") && !nav2Items[3].classList.contains("active") && !pagItems[5].classList.contains("active")) {
@@ -279,12 +436,25 @@ function fadeOut(el) {
         });
         nav2Items[3].classList.add("active");
         pagItems.forEach(function (element) {
+=======
+      if (getTopElemPos(section06) <= 300 && getTopElemPos(section06) >= -200 && !navItems[3].classList.contains("active") && !nav2Items[3].classList.contains("active") && !pagItems[5].classList.contains("active")) {
+        navItems.forEach(element => {
+          element.classList.remove("active");
+        });
+        navItems[3].classList.add("active");
+        nav2Items.forEach(element => {
+          element.classList.remove("active");
+        });
+        nav2Items[3].classList.add("active");
+        pagItems.forEach(element => {
+>>>>>>> feature-contact
           element.classList.remove("active");
         });
         pagItems[5].classList.add("active");
       }
 
       if (getTopElemPos(section07) <= 300 && getTopElemPos(section07) >= -200 && !navItems[4].classList.contains("active") && !nav2Items[4].classList.contains("active") && !pagItems[6].classList.contains("active")) {
+<<<<<<< HEAD
         navItems.forEach(function (element) {
           element.classList.remove("active");
         });
@@ -294,16 +464,35 @@ function fadeOut(el) {
         });
         nav2Items[4].classList.add("active");
         pagItems.forEach(function (element) {
+=======
+        navItems.forEach(element => {
+          element.classList.remove("active");
+        });
+        navItems[4].classList.add("active");
+        nav2Items.forEach(element => {
+          element.classList.remove("active");
+        });
+        nav2Items[4].classList.add("active");
+        pagItems.forEach(element => {
+>>>>>>> feature-contact
           element.classList.remove("active");
         });
         pagItems[6].classList.add("active");
       }
+<<<<<<< HEAD
     } //changeActiveNavItem();
 
   }, false);
 })();
 "use strict";
 
+=======
+    }
+
+    changeActiveNavItem();
+  }, false);
+})();
+>>>>>>> feature-contact
 var mySwiper = new Swiper(".swiper-container", {
   // Optional parameters
   direction: "horizontal",
@@ -335,26 +524,44 @@ var mySwiper = new Swiper(".swiper-container", {
   }
 });
 var swiperSlide = document.querySelectorAll(".swiper-slide");
+<<<<<<< HEAD
 Array.from(swiperSlide).forEach(function (slide) {
   slide.addEventListener('click', function () {
+=======
+Array.from(swiperSlide).forEach(slide => {
+  slide.addEventListener('click', () => {
+>>>>>>> feature-contact
     var slideId = slide.id;
     openFullScreenSwiper(slideId);
   });
 });
 
 function openFullScreenSwiper(initialSlideNumber) {
+<<<<<<< HEAD
   var isOpen = true;
   var mainSwiper = document.querySelector('.swiper-container');
   var fullScreenSwiperMarkup = document.getElementById('fullscreen-swiper'); // fullScreenSwiperMarkup.innerHTML = mainSwiperMarkup;
+=======
+  let isOpen = true;
+  let mainSwiper = document.querySelector('.swiper-container');
+  let fullScreenSwiperMarkup = document.getElementById('fullscreen-swiper'); // fullScreenSwiperMarkup.innerHTML = mainSwiperMarkup;
+>>>>>>> feature-contact
 
   fullScreenSwiperMarkup.innerHTML = mainSwiper.innerHTML;
   fullScreenSwiperMarkup.innerHTML += "<div id='fullscreen-swiper-close'></div>";
   fullScreenSwiperMarkup.style.display = 'block';
   fadeIn(fullScreenSwiperMarkup);
+<<<<<<< HEAD
   var backdrop = document.getElementById("fullscreen-swiper-backdrop");
   backdrop.style.display = 'block';
   fadeIn(backdrop);
   var fullScreenSwiper = new Swiper("#fullscreen-swiper", {
+=======
+  let backdrop = document.getElementById("fullscreen-swiper-backdrop");
+  backdrop.style.display = 'block';
+  fadeIn(backdrop);
+  let fullScreenSwiper = new Swiper("#fullscreen-swiper", {
+>>>>>>> feature-contact
     // Optional parameters
     direction: "horizontal",
     loop: true,
@@ -387,14 +594,22 @@ function openFullScreenSwiper(initialSlideNumber) {
     }
   });
   fullScreenSwiper.update();
+<<<<<<< HEAD
   var fullScreenSwiperClose = document.getElementById('fullscreen-swiper-close');
+=======
+  let fullScreenSwiperClose = document.getElementById('fullscreen-swiper-close');
+>>>>>>> feature-contact
   fullScreenSwiperClose.addEventListener('click', closeFullScreenSwiper);
 
   function closeFullScreenSwiper() {
     isOpen = false;
     fadeOut(fullScreenSwiperMarkup);
     fadeOut(backdrop);
+<<<<<<< HEAD
     setTimeout(function () {
+=======
+    setTimeout(() => {
+>>>>>>> feature-contact
       fullScreenSwiper.destroy();
       fullScreenSwiperMarkup.style.display = 'none';
       backdrop.style.display = 'none';
