@@ -63,7 +63,7 @@ gulp.task('sprites', function () {
 
 gulp.task( 'html', function () {
 	return gulp
-	.src("./src/**/*.html")
+	.src("./src/**/*.php")
 	.pipe(wait(1000))
     .pipe(plumber())
     .pipe(gulp.dest("public/"));
@@ -86,8 +86,8 @@ gulp.task( 'deploy', function () {
 
 gulp.task( 'watch', function () {
 	// Watch .html files
-	gulp.watch( 'src/**/*.html', ['html', browserSync.reload] );
-	gulp.watch( "public/*.html" ).on( 'change', browserSync.reload );
+	gulp.watch( 'src/**/*.php', ['html', browserSync.reload] );
+	gulp.watch( "public/*.php" ).on( 'change', browserSync.reload );
 	// Watch .sass files
 	gulp.watch( 'src/sass/**/*.scss', ['styles', browserSync.reload] );
 	// Watch .js files
