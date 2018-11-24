@@ -93,8 +93,7 @@ gulp.task( 'deploy', function () {
 gulp.task( 'watch', function () {
 	// Watch .html files
 	gulp.watch( 'src/**/*.php', ['html', browserSync.reload] );
-	gulp.watch( 'src/**/*.html', ['html', browserSync.reload] );
-	gulp.watch( "public/*.html" ).on( 'change', browserSync.reload );
+	gulp.watch( "public/*.php" ).on( 'change', browserSync.reload );
 	// Watch .sass files
 	gulp.watch( 'src/sass/**/*.scss', ['styles', browserSync.reload] );
 	// Watch .js files
