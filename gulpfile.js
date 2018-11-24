@@ -25,7 +25,7 @@ gulp.task('vendorScripts', function() {
 	gulp
     .src("./src/js/vendor/**/*.js")
 	.pipe(plumber())
-	.pipe(uglify())
+	// .pipe(uglify())
 	.pipe(gulp.dest("public/js/vendor"));
 });
 
@@ -37,7 +37,7 @@ gulp.task( 'scripts', function () {
 	}))
 	.pipe($.concat("app.js"))
     .pipe(gulp.dest("src/js"))
-	.pipe(uglify())
+	// .pipe(uglify())
     .pipe(gulp.dest("public/js"))
     .pipe(browserSync.reload({ stream: true }));
 } );

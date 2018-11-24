@@ -124,7 +124,7 @@ function fadeOut(el) {
 (function headerFixed() {
   var siteHeader = document.querySelector('.site-header');
   window.addEventListener('scroll', function () {
-    var currentScrollPos = document.documentElement.scrollTop;
+    var currentScrollPos = document.documentElement.scrollTop || document.body.scrollTop;
 
     if (currentScrollPos > 30) {
       siteHeader.classList.add("site-header--active");
@@ -139,6 +139,53 @@ function fadeOut(el) {
     var section05 = document.querySelector('.section-05');
     var section06 = document.querySelector('.section-06');
     var section07 = document.querySelector('.section-07');
+
+    function paginationDetection() {
+      // pagination
+      var pag = document.getElementById('pagination');
+      var pagItems = Array.from(pag.getElementsByTagName("a")); // navigation
+
+      var nav = document.getElementById('nav');
+      var navItems = Array.from(nav.getElementsByTagName('a')); // navigation inside hamburger menu
+
+      var nav2 = document.getElementById('nav2');
+      var nav2Items = Array.from(nav2.getElementsByTagName('a'));
+
+      for (var i = 1; i <= 7; i++) {
+        var section = eval("section0".concat(i));
+
+        if (getTopElemPos(section) <= 300 && getTopElemPos(section) >= -200 && !pagItems[i - 1].classList.contains("active")) {
+          //pagination highlight
+          pagItems.forEach(function (element) {
+            element.classList.remove("active");
+          });
+          pagItems[i - 1].classList.add("active"); //menu links highlight
+          //menu config
+          //pagination number => menu section higlighted
+
+          var menuArr = {
+            0: 0,
+            1: 1,
+            2: 2,
+            3: 2,
+            4: 2,
+            5: 3,
+            6: 4
+          };
+          var menuIndex = menuArr[i - 1];
+          navItems.forEach(function (element) {
+            element.classList.remove("active");
+          });
+          navItems[menuIndex].classList.add("active");
+          nav2Items.forEach(function (element) {
+            element.classList.remove("active");
+          });
+          nav2Items[menuIndex].classList.add("active");
+        }
+      }
+    }
+
+    paginationDetection();
 
     function getTopElemPos(el) {
       var topPos = el.getBoundingClientRect().top;
@@ -213,9 +260,16 @@ function fadeOut(el) {
           element.classList.remove('active');
         });
         pagItems[4].classList.add("active");
+        navItems[2].classList.add("active");
+        navItems[2].classList.add("active");
+        nav2Items[3].classList.remove("active");
+        nav2Items[3].classList.remove("active");
       }
 
-      if (getTopElemPos(section06) <= 300 && getTopElemPos(section06) >= -200 && !navItems[3].classList.contains("active") && !nav2Items[3].classList.contains("active") && !pagItems[5].classList.contains("active")) {
+      console.log(getTopElemPos(section06));
+
+      if (getTopElemPos(section06) <= 310 && getTopElemPos(section06) >= -100 && !navItems[3].classList.contains("active") && !nav2Items[3].classList.contains("active") && !pagItems[5].classList.contains("active")) {
+        console.log("in if");
         navItems.forEach(function (element) {
           element.classList.remove("active");
         });
@@ -244,9 +298,8 @@ function fadeOut(el) {
         });
         pagItems[6].classList.add("active");
       }
-    }
+    } //changeActiveNavItem();
 
-    changeActiveNavItem();
   }, false);
 })();
 "use strict";

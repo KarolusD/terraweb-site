@@ -4,8 +4,8 @@
 
     window.addEventListener('scroll', function() {
 
-        let currentScrollPos = document.documentElement.scrollTop;
-        
+        let currentScrollPos = document.documentElement.scrollTop || document.body.scrollTop ;
+      
         if(currentScrollPos > 30) {
             siteHeader.classList.add("site-header--active");
         } else {
@@ -20,11 +20,66 @@
         let section06 = document.querySelector('.section-06');
         let section07 = document.querySelector('.section-07');
 
+        function paginationDetection(){
+            // pagination
+            let pag = document.getElementById('pagination')
+            let pagItems = Array.from(pag.getElementsByTagName("a"));
+
+            // navigation
+            let nav = document.getElementById('nav');
+            let navItems = Array.from(nav.getElementsByTagName('a'));
+
+            // navigation inside hamburger menu
+            let nav2 = document.getElementById('nav2');
+            let nav2Items = Array.from(nav2.getElementsByTagName('a'));
+
+        
+
+       for (let i = 1;i <=7 ; i++){
+        let section = eval(`section0${i}`);
+           if (getTopElemPos(section) <= 300
+                && getTopElemPos(section) >= -200 
+                && !pagItems[i-1].classList.contains("active")) {
+            //pagination highlight
+               pagItems.forEach(element => {
+                   element.classList.remove("active");
+               });
+               pagItems[i - 1].classList.add("active");
+
+               //menu links highlight
+               //menu config
+               //pagination number => menu section higlighted
+               let menuArr = {
+                   0: 0,
+                   1: 1,
+                   2: 2,
+                   3: 2,
+                   4: 2,
+                   5: 3,
+                   6: 4
+               };
+               let menuIndex = menuArr[i - 1];
+               navItems.forEach(element => {
+                   element.classList.remove("active");
+               });
+               navItems[menuIndex].classList.add("active");
+
+               nav2Items.forEach(element => {
+                   element.classList.remove("active");
+               });
+               nav2Items[menuIndex].classList.add("active");
+             }
+        
+       }
+    }
+        paginationDetection();
+        
         function getTopElemPos(el) {
             let topPos = el.getBoundingClientRect().top;
             return topPos;
         }
-
+        
+    
         function changeActiveNavItem() {
 
             // navigation
@@ -123,14 +178,20 @@
                     element.classList.remove('active');
                 });
                 pagItems[4].classList.add("active");
-            }
 
-            if (getTopElemPos(section06) <= 300 
-            && getTopElemPos(section06) >= -200 
+              navItems[2].classList.add("active");
+              navItems[2].classList.add("active");
+
+              nav2Items[3].classList.remove("active");
+              nav2Items[3].classList.remove("active");
+            }
+          console.log(getTopElemPos(section06));
+            if (getTopElemPos(section06) <= 310 
+            && getTopElemPos(section06) >= -100 
             && !navItems[3].classList.contains("active") 
             && !nav2Items[3].classList.contains("active") 
             && !pagItems[5].classList.contains("active")) {
-
+              console.log("in if");
               navItems.forEach(element => {
                 element.classList.remove("active");
               });
@@ -168,9 +229,8 @@
               });
               pagItems[6].classList.add("active");
             }
-            
-        }
-        changeActiveNavItem();
+}
+        //changeActiveNavItem();
         
     }, false);
     

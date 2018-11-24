@@ -5,6 +5,7 @@
 
     .site-section__info-wrapper {
         flex-wrap: nowrap;
+        flex-basis: 0;
         @media (max-width: 765px) {
             flex-direction: column !important;
         }
