@@ -21,14 +21,14 @@
 
 <body class="main">
 
-<header data-aos="fade-down" class="site-header">
+<header class="site-header">
     <div class="site-logo logo">
         <a href="/">
-            <div class="icon-terraweb-logo" style="width: 180px; height: 21.26px;"></div>
+            <div data-aos="fade-down" class="icon-terraweb-logo" style="width: 180px; height: 21.26px;"></div>
         </a>
     </div>
     <nav class="site-nav">
-        <ul class="site-nav__list nav" id="nav">
+        <ul data-aos="fade-down" class="site-nav__list nav" id="nav">
             <li class="site-nav__item"><a href="#poczatek" class="site-nav__link active">początek</a></li>
             <li class="site-nav__item"><a href="#czym-sie-zajmujemy" class="site-nav__link">czym się zajmujemy</a></li>
             <li class="site-nav__item"><a href="#oferta" class="site-nav__link">oferta</a></li>
@@ -240,7 +240,7 @@
 
     <div class="flex-wrapper">
         <div data-aos="fade-right" class="flex-wrapper__offer-item">
-            <div class="icon-terra-mini-ico icon" style="width: 64px; height: 64px;"></div>
+            <div class="icon-logo icon" style="width: 64px; height: 64px;"></div>
             <h3 class="offer-item__title">projekty logo</h3>
 
             <p class="offer-item__paragraph">
@@ -254,7 +254,7 @@
         </div>
 
         <div data-aos="fade-up" class="flex-wrapper__offer-item">
-            <div class="icon-terra-standard-ico icon" style="width: 64px; height: 64px;"></div>
+            <div class="icon-wizytowka icon" style="width: 64px; height: 64px;"></div>
             <h3 class="offer-item__title">projekty wizytówek</h3>
 
             <p class="offer-item__paragraph">
@@ -269,7 +269,7 @@
         </div>
 
         <div data-aos="fade-left" class="flex-wrapper__offer-item">
-            <div class="icon-terra-premiumico icon" style="width: 64px; height: 64px;"></div>
+            <div class="icon-druk icon" style="width: 64px; height: 64px;"></div>
             <h3 class="offer-item__title">projekty do druku</h3>
 
             <p class="offer-item__paragraph">
@@ -297,7 +297,7 @@
 
     <div class="flex-wrapper">
         <div data-aos="fade-right" class="flex-wrapper__offer-item">
-            <div class="icon-terra-mini-ico icon" style="width: 64px; height: 64px;"></div>
+            <div class="icon-social_media icon" style="width: 64px; height: 64px;"></div>
             <h3 class="offer-item__title">social media</h3>
 
             <p class="offer-item__paragraph">
@@ -308,7 +308,7 @@
         </div>
 
         <div data-aos="fade-up" class="flex-wrapper__offer-item">
-            <div class="icon-terra-standard-ico icon" style="width: 64px; height: 64px;"></div>
+            <div class="icon-allegro icon" style="width: 64px; height: 64px;"></div>
             <h3 class="offer-item__title">szablony aukcji allegro</h3>
 
             <p class="offer-item__paragraph">
@@ -320,7 +320,7 @@
         </div>
 
         <div data-aos="fade-left" class="flex-wrapper__offer-item">
-            <div class="icon-terra-premiumico icon" style="width: 64px; height: 64px;"></div>
+            <div class="icon-narzedzia icon" style="width: 64px; height: 64px;"></div>
             <h3 class="offer-item__title">Dodatkowe narzędzia web</h3>
 
             <p class="offer-item__paragraph">
@@ -367,22 +367,21 @@
                     <!-- Slides -->
 
                     <div id="1" class="swiper-slide"
-                         style="background-image:url(https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/churning.jpeg)">
+                         style="background-image:url(./images/jmmeble.png)">
                         <div class="project-desc">
-                            <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+                            <h3 class="subtitle" data-swiper-parallax="-200"><a style="color:#fff" href="http://jmmeble.pl/kontakt">jmmeble</a></h3>
                             <div class="text" data-swiper-parallax="-100">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Opis projektu tutaj</p>
+                                <p>Strona produktowa marki meblowej</p>
                             </div>
                         </div>
                     </div>
 
                     <div id="2" class="swiper-slide"
-                         style="background-image:url(https://i.pinimg.com/originals/ec/b9/f1/ecb9f1b33ebeacc1088392bf065f58e2.jpg)">
+                         style="background-image:url(./images/bike-for-man.png)">
                         <div class="project-desc title">
-                            <h3 class="subtitle" data-swiper-parallax="-200">Subtitle</h3>
+                            <h3 class="subtitle" data-swiper-parallax="-200">bike for man</h3>
                             <div class="text" data-swiper-parallax="-100">
-                                <p>Długie zdjęcie test, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Opis
-                                    projektu tutaj</p>
+                                <p>Strona produktowa marki rowerowej (koncept)</p>
                             </div>
                         </div>
                     </div>
