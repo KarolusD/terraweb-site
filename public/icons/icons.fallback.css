@@ -1,6 +1,11 @@
 
-.icon-google {
-	background-image: url('png/google.png');
+.icon-fb {
+	background-image: url('png/fb.png');
+	background-repeat: no-repeat;
+}
+
+.icon-g+ {
+	background-image: url('png/g+.png');
 	background-repeat: no-repeat;
 }
 
@@ -9,8 +14,23 @@
 	background-repeat: no-repeat;
 }
 
+.icon-logo {
+	background-image: url('png/logo.png');
+	background-repeat: no-repeat;
+}
+
+.icon-narzedzia {
+	background-image: url('png/narzedzia.png');
+	background-repeat: no-repeat;
+}
+
 .icon-scroll-ico {
 	background-image: url('png/scroll-ico.png');
+	background-repeat: no-repeat;
+}
+
+.icon-social_media {
+	background-image: url('png/social_media.png');
 	background-repeat: no-repeat;
 }
 
@@ -19,8 +39,8 @@
 	background-repeat: no-repeat;
 }
 
-.icon-terra-premium-ico {
-	background-image: url('png/terra-premium-ico.png');
+.icon-terra-premiumico {
+	background-image: url('png/terra-premiumico.png');
 	background-repeat: no-repeat;
 }
 
@@ -29,22 +49,32 @@
 	background-repeat: no-repeat;
 }
 
-.icon-terraweb {
-	background-image: url('png/terraweb.png');
+.icon-terraweb-logo {
+	background-image: url('png/terraweb-logo.png');
 	background-repeat: no-repeat;
 }
 
-.icon-arrow-down-ico {
-	background-image: url('png/arrow-down-ico.png');
+.icon-wizytowka {
+	background-image: url('png/wizytowka.png');
 	background-repeat: no-repeat;
 }
 
-.icon-arrow-right-ico {
-	background-image: url('png/arrow-right-ico.png');
+.icon-allegro {
+	background-image: url('png/allegro.png');
 	background-repeat: no-repeat;
 }
 
-.icon-fb {
-	background-image: url('png/fb.png');
+.icon-arrow-down {
+	background-image: url('png/arrow-down.png');
+	background-repeat: no-repeat;
+}
+
+.icon-arrow-right {
+	background-image: url('png/arrow-right.png');
+	background-repeat: no-repeat;
+}
+
+.icon-druk {
+	background-image: url('png/druk.png');
 	background-repeat: no-repeat;
 }

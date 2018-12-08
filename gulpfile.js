@@ -1,13 +1,13 @@
-var
-	gulp = require( 'gulp' ),
-	browserSync = require( 'browser-sync' ),
-	$ = require( 'gulp-load-plugins' )( {lazy: true} );
-	wait = require('gulp-wait');	
-	plumber = require('gulp-plumber');
-	svgSprite = require("gulp-svg-sprites");
-	filter = require('gulp-filter');
-	svg2png = require('gulp-svg2png');
-
+var gulp = require("gulp"),
+  browserSync = require("browser-sync"),
+  $ = require("gulp-load-plugins")({ lazy: true }),
+  wait = require("gulp-wait"),
+  plumber = require("gulp-plumber"),
+  svgSprite = require("gulp-svg-sprites"),
+  babel = require("gulp-babel"),
+  uglify = require("gulp-uglify"),
+  pump = require("pump");
+	
 
 gulp.task( 'styles', function () {
 	return gulp
@@ -22,19 +22,22 @@ gulp.task( 'styles', function () {
 } );
 
 gulp.task('vendorScripts', function() {
-	gulp.src('./src/js/vendor/**/*.js')
-			.pipe(plumber())
-			.pipe(gulp.dest('public/js/vendor'));
+	gulp
+    .src("./src/js/vendor/**/*.js")
+	.pipe(plumber())
+	// .pipe(uglify())
+	.pipe(gulp.dest("public/js/vendor"));
 });
 
 gulp.task( 'scripts', function () {
 	return gulp
-    .src(["./src/js/!(vendor)**/!(app)*.js", "./src/js/app.js"])
-    .pipe($.plumber())
-    .pipe($.babel())
-    .pipe($.concat("app.js"))
-    .pipe($.uglify())
-    .pipe(plumber())
+    .src(["./src/js/!(vendor)**/!(app)*.js", "./src/js/scripts/*.js"])
+	.pipe(babel({
+		presets: ['@babel/preset-env']
+	}))
+	.pipe($.concat("app.js"))
+    .pipe(gulp.dest("src/js"))
+	// .pipe(uglify())
     .pipe(gulp.dest("public/js"))
     .pipe(browserSync.reload({ stream: true }));
 } );
@@ -56,17 +59,16 @@ gulp.task( 'images', function () {
 
 gulp.task('sprites', function () {
 	return gulp
-    .src("src/icons/svg/*.svg")
-	.pipe(svgSprite()) //You'll get an SVG file and a preview file showing how to use it
+    .src("src/icons/*.svg")
+	.pipe(svgSprite({mode:"symbols"})) //You'll get an SVG file and a preview file showing how to use it
     .pipe(gulp.dest("public/icons")) // Write the sprite-sheet + CSS + Preview
-    .pipe(filter("public/icons/**/*.svg")) // Filter out everything except the SVG file
-    .pipe(svg2png()) // Create a PNG
-    .pipe(gulp.dest("public/icons"));
+   
 });
 
 gulp.task( 'html', function () {
 	return gulp
-    .src("./src/**/*.html")
+	.src("./src/**/*.php")
+	.pipe(wait(1000))
     .pipe(plumber())
     .pipe(gulp.dest("public/"));
 } );
@@ -86,14 +88,16 @@ gulp.task( 'deploy', function () {
 		.pipe( ghPages() );
 } );
 
+
+
 gulp.task( 'watch', function () {
 	// Watch .html files
-	gulp.watch( 'src/**/*.html', ['html', browserSync.reload] );
-	gulp.watch( "public/*.html" ).on( 'change', browserSync.reload );
+	gulp.watch( 'src/**/*.php', ['html', browserSync.reload] );
+	gulp.watch( "public/*.php" ).on( 'change', browserSync.reload );
 	// Watch .sass files
 	gulp.watch( 'src/sass/**/*.scss', ['styles', browserSync.reload] );
 	// Watch .js files
-	gulp.watch( 'src/js/*.js', ['scripts', browserSync.reload] );
+	gulp.watch( 'src/js/*/*.js', ['scripts', browserSync.reload] );
 	// Watch .js files
 	gulp.watch( 'src/js/vendor/*', ['vendorScripts', browserSync.reload] );
 	// Watch image files

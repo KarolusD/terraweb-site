@@ -1,0 +1,73 @@
+.section-07 {
+    min-height: 768px;
+    height: auto;
+    max-height: none;
+
+    .site-section__info-wrapper {
+        flex-wrap: nowrap;
+        flex-basis: 0;
+        @media (max-width: 765px) {
+            flex-direction: column !important;
+        }
+    }
+    
+    .number--corner-number {
+        &:before {
+            background: url(../images/merkury-image.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 140px;
+            height: 140px;
+        }
+    }
+
+    .article-07 {
+        text-align: right;
+
+        .contact {
+            padding: 32px 40px;
+            border-right: 3px solid $primary-brand-color;
+            margin-bottom: 40px;
+
+            &__title {
+                margin-bottom: 40px;
+            }
+
+            &__subtitle {
+                margin: 40px 0 16px 0;
+            }
+
+            &__info {
+                margin-bottom: 8px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .aside-07 {
+        margin-top: 0;
+        margin-left: 64px;
+         @media(max-width: 765px) {
+                margin-left: 0;
+                width: 100%;
+         }
+
+        .contact-form {
+            position: relative;   
+            height: auto;
+            width: auto;
+            max-width: 400px;
+            padding-top: 16px;
+
+            @media(max-width: 765px) {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100% !important;
+                max-width: none !important;
+            }
+        }
+    }
+}

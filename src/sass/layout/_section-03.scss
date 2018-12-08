@@ -1,0 +1,187 @@
+.site-section {
+
+    .flex-wrapper {
+        position: relative;
+        left: 50%;
+        margin-top: 240px;
+        margin-bottom: 120px;
+        transform: translate(-50%);
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        width: auto;
+        max-width: 90%;
+
+        .offer-item--main {
+            border: 4px solid $secondary-brand-lighter-color;
+        }
+
+        &__offer-item {
+            position: relative;
+            box-sizing: border-box;
+            width: 33.3%;
+            height: auto;
+            min-height: 360px;
+            max-width: 360px;
+            background-color: $secondary-bg-color;
+            margin-right: 29px;
+            padding: 24px 32px;
+            overflow: hidden;
+
+            .distinction-color--word-break {
+                @media (max-width: 765px) {
+                    display: block;
+                }
+            }
+            
+
+            .main-color {
+                border: 2px solid $secondary-brand-lighter-color;
+                color: $secondary-brand-lighter-color;
+                @media(hover: hover) {
+                    &:hover,
+                     {
+                        color: $primary-text-color;
+                        background: $secondary-brand-lighter-color;
+                    }
+                }
+                &:active {
+                    color: $primary-text-color;
+                    background: $secondary-brand-lighter-color;
+                }
+            }
+
+            .btn {
+                position: absolute;
+                bottom: 32px;
+                left: 50%;
+                transform: translateX(-50%);
+
+             
+
+                @media (max-width: 419px) {
+                     font-size: 3vw;
+                     
+                    
+                }
+            }
+
+            .offer-item__plus {
+                margin-bottom: 16px;
+
+            }
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+
+            .offer-item__title {
+                margin: 16px 0 40px 0;
+            }
+
+            .offer-item__list {
+               color: $primary-text-color;
+               margin-bottom: 81px;   
+               
+                .list__item {
+                margin-bottom: 8px;
+                text-indent: -1.4rem;
+                text-align: left;
+                  
+
+                    &:last-of-type {
+                        margin-bottom: 0;      
+                    }
+
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-right: 1rem;
+                        width: 4px;
+                        height: 4px;
+                        background-color: $primary-brand-color;
+                    }
+                }
+                
+                .list__item--tooltip {
+                    cursor: pointer;
+        
+                    &:after {
+                        content:"";
+                        position: absolute;
+                        display: inline-block;
+                        padding: 1.6rem 2.4rem;
+                        text-align: center;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 12px;
+                        color: white;
+                        background-color: $primary-brand-color;
+                        opacity: 0;
+                        transition: all .5s ease-in-out;
+                    }
+                    &:hover:after {
+                        opacity: 1;  
+                    }
+                }
+
+                .tooltip-01 {
+                   &:after {
+                       content: "tooltip 01" !important;
+                   } 
+                }
+
+                .tooltip-02 {
+                   &:after {
+                       content: "tooltip 02" !important;
+                   } 
+                }
+
+                .tooltip-03 {
+                   &:after {
+                       content: "tooltip 03" !important;
+                   } 
+                }
+            }
+
+        }
+
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            align-items: center;
+            width: 80vw;
+            margin-bottom: 80px;
+            
+            &__offer-item {
+                text-align: center;
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+                margin-bottom: 24px;
+                max-width: 560px;
+
+                 .offer-item__list {
+                    margin-left: 5%;
+                    .list__item {
+                        text-align: center;
+                    }
+
+                }
+               
+                .icon {
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    
+}
+
+.section-03 {
+    min-height: 768px;
+    max-height: none;
+    height: auto;
+}
