@@ -174,8 +174,8 @@
             </h3>
 
             <ul class="offer-item__list">
-                <li class="list__item list__item--tooltip tooltip-01">Własna domena*</li>
-                <li class="list__item list__item--tooltip tooltip-02">Niezawodny hosting*</li>
+                <li class="list__item tooltip-00">Własna domena</li>
+                <li class="list__item tooltip-00">Niezawodny hosting</li>
                 <li class="list__item">Projekt graficzny</li>
                 <li class="list__item">One page</li>
                 <li class="list__item">Responsywność</li>
@@ -195,7 +195,7 @@
 
             <p class="offer-item__plus link">terra <span class="distinction-color">mini</span> plus:</p>
             <ul class="offer-item__list">
-                <li class="list__item list__item--tooltip tooltip-03">Certyfikat SSL*</li>
+                <li class="list__item tooltip-00">Certyfikat SSL</li>
                 <li class="list__item">Statystyki odwiedzin</li>
                 <li class="list__item">Do 4 podstron</li>
                 <li class="list__item">Logo + wizytówka na życzenie</li>

@@ -4,4 +4,4 @@ bower_components
 .sass-cache
 .publish
 .idea
-
+.htaccess
