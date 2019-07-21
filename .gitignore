@@ -4,4 +4,6 @@ bower_components
 .sass-cache
 .publish
 .idea
+PHPMailer
 
+.htaccess

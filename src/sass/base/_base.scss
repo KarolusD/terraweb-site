@@ -1,31 +1,52 @@
- push*{
-    box-sizing: border-box;
+push* {
+  box-sizing: border-box;
 }
 
-html, body {
-    font-size: 10px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    overflow-x: hidden;
+html,
+body {
+  font-size: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  overflow-x: hidden;
+  background: #101722;
 
-    ::-moz-selection { /* Code for Firefox */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+
+
+  ::-moz-selection {
+    /* Code for Firefox */
     color: $primary-text-color;
     background: $secondary-brand-lighter-color;
-    }
+  }
 
-    ::selection {
+  ::selection {
     color: $primary-text-color;
     background: $secondary-brand-lighter-color;
-    }
+  }
+
+  
 }
 
 section {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    min-height: 640px;
-    overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 640px;
+  max-height: 900px;
+  overflow: hidden;
 }
+
+.distinction-color {
+  color: $primary-brand-color;
+}
+
+form {
+  width: 80% !important;
+}
+
+
+

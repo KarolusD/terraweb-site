@@ -1,0 +1,126 @@
+<<<<<<< HEAD
+.section-06 {
+    height: auto;
+    max-height: none;
+
+    .wrapper-06 {
+        flex-wrap: nowrap;
+        flex-basis: auto !important;
+        margin-top: 275px;
+        flex-direction: row !important;
+        align-items: baseline;
+        @media (max-width: 765px) {
+            width: 90%;
+        }
+
+        .article__cta {
+            flex-wrap: nowrap;
+
+            @media(max-width: 1198px) {
+            flex-wrap: wrap;
+            }
+
+        }
+
+        @media(max-width: 1198px) {
+            margin-top: 300px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media(max-width: 765px) {
+            margin-top: 200px;
+        }
+    }
+
+    .aside-06 {
+        display: block;
+        width: 45%;
+        height: 320px;
+        margin-top: 0;
+        margin-left: 4rem;
+        top: -16px;
+        
+    
+        @media(max-width: 1198px) {
+            width: 100%;
+            height: 480px;
+            margin-left: 0;
+            margin-top: 80px;
+        }
+
+        
+    }
+
+
+    .image--under {
+        background: url(../images/neptun-image.png);
+        background-attachment: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+       
+   }
+=======
+.section-06 {
+    height: auto;
+    max-height: none;
+
+    .wrapper-06 {
+        flex-wrap: nowrap;
+        flex-basis: auto !important;
+        margin-top: 275px;
+        flex-direction: row !important;
+        align-items: baseline;
+        @media (max-width: 765px) {
+            width: 90%;
+        }
+
+        .article__cta {
+            flex-wrap: nowrap;
+
+            @media(max-width: 1198px) {
+            flex-wrap: wrap;
+            }
+
+        }
+
+        @media(max-width: 1198px) {
+            margin-top: 300px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media(max-width: 765px) {
+            margin-top: 200px;
+        }
+    }
+
+    .aside-06 {
+        display: block;
+        width: 45%;
+        height: 320px;
+        margin-top: 0;
+        margin-left: 4rem;
+        top: -16px;
+        
+    
+        @media(max-width: 1198px) {
+            width: 100%;
+            height: 480px;
+            margin-left: 0;
+            margin-top: 80px;
+        }
+
+        
+    }
+
+
+    .image--under {
+        background: url(../images/neptun-image.png);
+        background-attachment: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+       
+   }
+>>>>>>> 61b72e3f24234bc8e9146633c822f9b5b6e9c2d4
+}

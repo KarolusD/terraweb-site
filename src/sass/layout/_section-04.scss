@@ -1,0 +1,66 @@
+<<<<<<< HEAD
+.section-04 {
+   height: auto;
+   min-height: none;
+   max-height: none;
+
+   .number--corner-number {
+       &:before {
+           background: url(../images/saturn-image.png);
+           background-size: contain;
+           background-repeat: no-repeat;
+           background-position: center;
+       }
+   }
+    .flex-wrapper__offer-item {
+        
+
+        .offer-item__title {
+            margin-bottom: 16px;
+        }
+
+        .offer-item__paragraph {
+            color: $secondary-text-color;
+            opacity: .6;
+            margin-bottom: 81px;
+
+            @media (max-width: 768px) {
+                padding: 0 16px;
+            }
+        }
+    }
+
+=======
+.section-04 {
+   height: auto;
+   min-height: none;
+   max-height: none;
+
+   .number--corner-number {
+       &:before {
+           background: url(../images/saturn-image.png);
+           background-size: contain;
+           background-repeat: no-repeat;
+           background-position: center;
+       }
+   }
+    .flex-wrapper__offer-item {
+        
+
+        .offer-item__title {
+            margin-bottom: 16px;
+        }
+
+        .offer-item__paragraph {
+            color: $secondary-text-color;
+            opacity: .6;
+            margin-bottom: 81px;
+
+            @media (max-width: 768px) {
+                padding: 0 16px;
+            }
+        }
+    }
+
+>>>>>>> 61b72e3f24234bc8e9146633c822f9b5b6e9c2d4
+}
