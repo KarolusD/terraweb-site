@@ -1,33 +1,35 @@
-# HTML/CSS/JS starter powered by gulp to use SASS and Babel (ES6)
+# Terraweb agency website
 
-Includes Gulp to compile Sass into CSS, along with Autoprefixer, Babel into ES5 JS and Browser Sync.
+Modern web agency website, builded in vanilla JS and PHP.
 
-## Setup
+### Prerequisites
 
-Before starting, you'll need [Node](https://nodejs.org/) (which includes NPM).
+This should be installed on your computer in order to get up and running:
 
-If using OSX, I'd recommend this guide to [getting set up with Node and NPM](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/).
+- [Node.js](https://nodejs.org/en/)
+- [Gulp 4](https://gulpjs.com/)
+- [Sass](http://sass-lang.com/)
 
-Then install Gulp using `npm install -g gulp`. This installs Gulp globally and is needed later.
+### Installing
 
-Clone this repo to your local computer using this command:
+1. `git clone`
+2. `cd terraweb-site`
+3. `npm install`
+4. `npm start`
 
-    git clone https://git@github.com/shramee/gulp-sass-babel.git starter
+## Deployment
 
-With the files downloaded, navigate to your `starter` folder on the command line (or Terminal) and run `npm install` to set things up.
+1. `npm run build`: This is used to build all files and run all tasks without serving a development server and watching for changes.
+2. `npm start`: This is the normal development script used to build all files and run all tasks, but also to serve a development server and watch for changes.
 
-If that doesn't work, it may be necessary to use `sudo npm install`.
+## Built With
 
-With this set up, you should now be able to run:
+* JS
+* PHP
+* MySQL
+* SCSS
+* GULP
 
-    gulp
+## Authors
 
-This will process any Sass (SCSS) files, translate ES6 to ES5 and launch a web browser showing the current files. Making changes to the files should result in the page updating automatically.
-
-## Questions
-
-Drop me a line at [shramee.srivastav@gmail.com](shramee.srivastav@gmail.com) with any questions or thoughts. Pull requests welcomed!
-
-### License
-
-MIT
+* **Karol Podżerek & Adam Strzyżewski** 
