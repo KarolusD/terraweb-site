@@ -65,6 +65,7 @@ gulp.task('sprites', function () {
    
 });
 
+<<<<<<< HEAD
 gulp.task( 'html', function () {
 	return gulp
 	.src("./src/**/*.php")
@@ -73,6 +74,8 @@ gulp.task( 'html', function () {
     .pipe(gulp.dest("public/"));
 } );
 
+=======
+>>>>>>> 61b72e3f24234bc8e9146633c822f9b5b6e9c2d4
 gulp.task( 'browser-sync', ['styles', 'scripts'], function () {
 	browserSync( {
 		server: {
@@ -92,8 +95,12 @@ gulp.task( 'deploy', function () {
 
 gulp.task( 'watch', function () {
 	// Watch .html files
+<<<<<<< HEAD
 	gulp.watch( 'src/**/*.php', ['html', browserSync.reload] );
 	gulp.watch( "public/*.php" ).on( 'change', browserSync.reload );
+=======
+	gulp.watch( "*.php" ).on( 'change', browserSync.reload );
+>>>>>>> 61b72e3f24234bc8e9146633c822f9b5b6e9c2d4
 	// Watch .sass files
 	gulp.watch( 'src/sass/**/*.scss', ['styles', browserSync.reload] );
 	// Watch .js files
@@ -110,7 +117,6 @@ gulp.task( 'default', function () {
 		'vendorScripts',
 		'scripts',
 		'images',
-		'html',
 		'browser-sync',
 		'watch'
 	);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .site-pagination {
     position: fixed;
     top: 50%;
@@ -56,4 +57,64 @@
         }
 
     }
+=======
+.site-pagination {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 40px;
+    width: auto;
+    height: auto;
+    z-index: 9999;
+
+    .pagination {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        @media (max-width: 765px) {
+            display: none;
+        }
+
+        @keyframes width-frame {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 60%;
+            }
+        }
+        
+        .pagination-item {
+
+            cursor: pointer;
+            position: relative;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 26px;
+            
+        
+            &:last-of-type {
+                margin-bottom: none;
+            }
+            
+            a { text-decoration: none; color: rgba(255, 255, 255, 0.5)}
+            
+            .active {
+               color: $primary-text-color !important;
+    
+                &:before {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    border-bottom: 3px solid $primary-brand-color;
+                    width: 60%;
+                    margin-left: 10px;
+                    animation: width-frame 300ms forwards;
+                }
+            }
+        }
+
+    }
+>>>>>>> 61b72e3f24234bc8e9146633c822f9b5b6e9c2d4
 }
