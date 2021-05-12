@@ -44,6 +44,6 @@
     "babel-core": "^7.0.0-bridge.0",
     "gulp": "^3.9.1",
     "pump": "^3.0.0",
-    "swiper": "^4.4.2"
+    "swiper": "^6.5.1"
   }
 }
